@@ -1,0 +1,1356 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Icons;
+  src:
+    url(../fonts/Icons.ttf?12bndh) format("truetype"),
+    url(../fonts/Icons.woff?12bndh) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+:root {
+  --bs-body-font-family: "Roboto", sans-serif;
+  --bs-body-font-size: 18px;
+  --bs-body-line-height: 1.2;
+  --bs-body-color: #000000;
+}
+i[class^="icon-"] {
+  color: #000;
+  font-family: Icons !important;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-facebook:before {
+  content: "\e900";
+}
+.icon-instagram:before {
+  content: "\e901";
+}
+.icon-telegram:before {
+  content: "\e902";
+}
+.icon-tiktok:before {
+  content: "\e903";
+}
+.icon-viber:before {
+  content: "\e904";
+}
+main {
+  overflow: hidden;
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+}
+.nika-top-bar,
+header,
+section {
+  display: flex;
+}
+.nika-top-bar .nika-scroll-anchor,
+header .nika-scroll-anchor,
+section .nika-scroll-anchor {
+  background-color: #fff;
+  border-right: 1px solid #e1e1e1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+.nika-top-bar .nika-scroll-anchor a,
+header .nika-scroll-anchor a,
+section .nika-scroll-anchor a {
+  color: #4c5461;
+  padding: 0 1.75rem;
+  text-align: end;
+  text-decoration: none;
+  width: 100%;
+  writing-mode: vertical-lr;
+}
+.nika-top-bar .container-fluid,
+header .container-fluid,
+section .container-fluid {
+  max-width: 1308px;
+  padding: 0 3rem;
+}
+.row {
+  --bs-gutter-x: 1rem;
+}
+.btn {
+  background: linear-gradient(180deg, #ffd03d, #f90);
+  border: 2px solid #ffd03d;
+  border-radius: 50rem;
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0 10px 10px -5px !important;
+  color: #fff;
+  flex-shrink: 0;
+  font-size: 20px;
+  font-weight: 500;
+  overflow: hidden;
+  padding: 1rem 3rem;
+  position: relative;
+  transition: 0.25s;
+}
+.btn:hover {
+  color: #fff;
+  background: linear-gradient(180deg, #ffd03d, #f90);
+  border: 2px solid #ffd03d;
+  filter: brightness(110%);
+}
+.btn:active {
+  border: 2px solid #ffd03d !important;
+}
+.btn::after {
+  animation: btnAnimation 3.5s ease-in-out infinite;
+  animation-fill-mode: forwards;
+  content: "";
+  height: 70%;
+  left: -160%;
+  opacity: 0;
+  position: absolute;
+  top: -130%;
+  transform: rotate(120deg);
+  width: 200px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.5) 0,
+    rgba(255, 255, 255, 0.5) 77%,
+    rgba(255, 255, 255, 0.8) 92%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+@keyframes btnAnimation {
+  10% {
+    left: -160%;
+    opacity: 1;
+    top: -130%;
+    transition-duration: 0.3s, 0.3s, 0.1s;
+    transition-property: left, top, opacity;
+    transition-timing-function: ease;
+  }
+  to {
+    left: 130%;
+    opacity: 0;
+    top: 130%;
+    transition-property: left, top, opacity;
+  }
+}
+.nika-top-bar {
+  padding: 10px 0;
+}
+.nika-top-bar .nika-channel-buttons,
+.nika-top-bar .nika-social {
+  display: flex;
+  gap: 14px;
+}
+.nika-top-bar .nika-channel-buttons a,
+.nika-top-bar .nika-social a {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  text-decoration: none;
+  width: 30px;
+}
+.nika-top-bar .nika-channel-buttons a i,
+.nika-top-bar .nika-social a i {
+  color: #ffcf3c;
+  font-size: 19px;
+}
+.nika-top-bar .nika-channel-buttons a i.icon-facebook,
+.nika-top-bar .nika-social a i.icon-facebook {
+  color: #0766ff;
+}
+.nika-top-bar .nika-channel-buttons a i.icon-instagram,
+.nika-top-bar .nika-social a i.icon-instagram {
+  color: #e1306c;
+}
+.nika-top-bar .nika-channel-buttons a i.icon-tiktok,
+.nika-top-bar .nika-social a i.icon-tiktok {
+  color: #000;
+}
+.nika-top-bar .nika-lang-switch {
+  display: flex;
+  margin-left: auto;
+}
+.nika-top-bar .nika-lang-switch a,
+.nika-top-bar .nika-lang-switch .nika-lang-switch__link,
+.nika-top-bar .nika-lang-switch .nika-lang-switch__current {
+  color: #000;
+  display: block;
+  font-size: 16px;
+  padding: 0 6px;
+  text-decoration: none;
+}
+.nika-top-bar .nika-lang-switch .nika-lang-switch__link:hover {
+  color: #000;
+}
+.nika-top-bar .nika-lang-switch .nika-lang-switch__current {
+  cursor: default;
+  font-weight: 600;
+}
+.nika-top-bar .nika-lang-switch > *:first-child {
+  position: relative;
+}
+.nika-top-bar .nika-lang-switch > *:first-child::after {
+  background-color: #e1e1e1;
+  content: "";
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transform: rotate(15deg);
+  width: 1px;
+}
+.nika-top-bar .nika-channel-buttons {
+  gap: 12px;
+}
+.nika-top-bar .nika-offers-banner {
+  font-size: 13px;
+  margin: 0 16px 0 32px;
+}
+.nika-top-bar .nika-channel-buttons a.nika-channel--telegram {
+  background-color: #3390ec;
+}
+.nika-top-bar .nika-channel-buttons a.nika-channel--viber {
+  background-color: #6c4ed0;
+}
+.nika-top-bar .nika-channel-buttons a i {
+  color: #fff;
+  font-size: 16px;
+}
+header {
+  z-index: 9;
+  top: 60px;
+  transition: all 0.3s ease;
+  position: absolute;
+  width: 100% !important;
+}
+header.hide {
+  transform: translateY(-100%);
+  top: 0;
+}
+header.header-fixed {
+  background: #fff;
+  box-shadow: 0 12px 20px rgba(44, 43, 43, 0.08);
+  border-bottom: 1px solid #e1e1e1;
+  position: fixed;
+  top: 0;
+}
+header.header-fixed .navbar {
+  padding-bottom: 10px;
+}
+header.header-fixed .navbar-brand img {
+  width: auto;
+  height: 77px;
+}
+header.header-fixed .navbar-nav .nav-item .nav-link {
+  color: #000;
+}
+header.header-fixed .nika-header__contacts > div:nth-child(2) {
+  display: none !important;
+}
+header.header-fixed .nika-header__contacts a {
+  color: #2fdaef;
+}
+header.header-fixed .nika-header__contacts-telegram {
+  display: none;
+}
+header .nika-scroll-anchor {
+  border: unset;
+}
+header .navbar-nav .nav-item .nav-link {
+  color: #fff;
+  font-size: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+header .nika-header__contacts a {
+  color: #fff;
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+}
+header .nika-header__contacts a:hover {
+  color: #2fdaef;
+}
+header .nika-header__contacts-telegram {
+  align-items: center;
+  background-color: #2fdaef;
+  border-radius: 50rem;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 6px;
+  padding: 8px 14px 8px 8px;
+  width: 100%;
+}
+header .nika-header__contacts-telegram a {
+  font-size: 14px !important;
+}
+header .nika-header__contacts-telegram a:hover {
+  color: #fff;
+}
+.nika-hero .nika-section-inner {
+  border-bottom-left-radius: 1.75rem;
+  overflow: hidden;
+}
+.nika-hero .container-fluid {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 750px;
+  padding: calc(124px + 3.5rem) 3rem calc(78px + 3.5rem) 3rem;
+}
+.nika-hero .h1,
+.nika-hero h1 {
+  color: #fff;
+  font-size: 50px;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+}
+.nika-hero .h1 span,
+.nika-hero .h1::first-letter,
+.nika-hero h1 span,
+.nika-hero h1::first-letter {
+  color: #2fdaef;
+}
+.nika-hero p {
+  animation-delay: 0.25s;
+  color: #fff;
+  font-size: 28px;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+.nika-hero .btn {
+  animation-delay: 0.75s;
+  display: table;
+  margin: 0 auto;
+}
+.nika-hero .nika-hero-media {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.nika-hero .nika-hero-media::after {
+  background: rgba(55, 67, 115, 0.4);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.nika-hero .nika-hero-media img,
+.nika-hero .nika-hero-media video {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+}
+.nika-destinations .container-fluid {
+  margin: calc(3.5rem - 20px) auto 0 auto;
+}
+.nika-destinations .h2,
+.nika-destinations h2 {
+  font-size: 40px;
+  margin-bottom: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.nika-destinations .h2::first-letter,
+.nika-destinations h2::first-letter {
+  color: #0ec5e5;
+}
+.nika-destinations .card {
+  border: unset;
+  border-radius: 1.25rem;
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+.nika-destinations .card picture img {
+  height: 260px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+}
+.nika-destinations .nika-card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+}
+.nika-destinations .nika-card__heading {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.nika-destinations .nika-card__price {
+  background: #2fdaef;
+  border-radius: 50rem;
+  color: #fff;
+  font-weight: 500;
+  margin: 0;
+  padding: 10px 12px;
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+}
+.nika-destinations .nika-card__route {
+  color: #828282;
+  margin-bottom: 1.25rem;
+}
+.nika-destinations .nika-card__cta {
+  align-items: center;
+  color: #2fdaef;
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+  text-decoration: none;
+}
+.nika-hot-offers .container-fluid {
+  margin: 0.5rem auto 0 auto;
+}
+.nika-hot-offers .h2,
+.nika-hot-offers h2 {
+  font-size: 40px;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+.nika-hot-offers .h2::first-letter,
+.nika-hot-offers h2::first-letter {
+  color: #0ec5e5;
+}
+.nika-hot-offers .card {
+  border: unset;
+  border-radius: 1.25rem;
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+  height: 285px;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+.nika-hot-offers .card:hover .nika-card__content {
+  background: rgba(0, 0, 0, 0.5);
+}
+.nika-hot-offers .card:hover picture img {
+  filter: blur(4px);
+}
+.nika-hot-offers .nika-offer-card--compact .nika-card__footer {
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.nika-hot-offers .nika-offer-card--compact .nika-card__rating {
+  order: -1;
+}
+.nika-hot-offers .card picture img {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  transition: 0.2s;
+  width: 100%;
+}
+.nika-hot-offers .nika-card__content {
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem;
+  position: relative;
+  transition: 0.2s;
+  z-index: 2;
+}
+.nika-hot-offers .nika-card__header {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+}
+.nika-hot-offers .nika-card__meta-days,
+.nika-hot-offers .nika-card__meta-guests {
+  color: #fff;
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+.nika-hot-offers .nika-card__meta-days {
+  margin-bottom: 0.25rem;
+}
+.nika-hot-offers .nika-card__price-tag {
+  background: #2fdaef;
+  border-radius: 50rem;
+  color: #fff;
+  font-weight: 500;
+  margin: 0;
+  padding: 10px 12px;
+}
+.nika-hot-offers .nika-card__footer {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+.nika-hot-offers .nika-card__destination-title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+.nika-hot-offers .nika-card__destination-note {
+  color: #fff;
+  margin-bottom: 0;
+}
+.nika-cta-vacation .nika-section-inner,
+.nika-cta-exclusive .nika-section-inner {
+  background: url(../img/cta-vacation-pattern.png) #0ad4ec;
+  border-bottom-left-radius: 1.75rem;
+  border-top-left-radius: 1.75rem;
+  margin-top: 3rem;
+}
+.nika-cta-vacation .container-fluid,
+.nika-cta-exclusive .container-fluid {
+  max-width: 1308px;
+  padding: 4rem 3rem;
+}
+.nika-cta-vacation .container-fluid > div,
+.nika-cta-exclusive .container-fluid > div {
+  gap: 3rem;
+}
+.nika-cta-vacation .h3,
+.nika-cta-vacation h3,
+.nika-cta-exclusive .h3,
+.nika-cta-exclusive h3 {
+  color: #fff;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.nika-cta-vacation p,
+.nika-cta-exclusive p {
+  color: #fff;
+}
+.nika-services-showcase .container-fluid {
+  margin: 4.5rem auto 0 auto;
+}
+.nika-services-showcase .nika-showcase-collage {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.nika-services-showcase .nika-showcase-collage img {
+  border-radius: 1.25rem;
+}
+.nika-services-showcase .nika-showcase-collage img:first-child {
+  margin-right: 1rem;
+  width: calc(45% - 0.5rem);
+}
+.nika-services-showcase .nika-showcase-collage img:nth-child(2) {
+  width: calc(55% - 0.5rem);
+}
+.nika-services-showcase .nika-showcase-collage img:nth-child(3) {
+  align-self: flex-start;
+  margin: 1rem 1rem 0 0;
+  width: 32.5%;
+}
+.nika-services-showcase .nika-showcase-collage img:last-child {
+  align-self: flex-start;
+  margin-top: 1rem;
+  width: calc(45% - 1rem);
+}
+.nika-services-showcase .h3,
+.nika-services-showcase h3 {
+  font-size: 40px;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+}
+.nika-services-showcase .h3::first-letter,
+.nika-services-showcase h3::first-letter {
+  color: #0ec5e5;
+}
+.nika-services-showcase p {
+  color: #828282;
+}
+.nika-services-showcase .list-group {
+  margin-bottom: 1.25rem;
+}
+.nika-services-showcase .list-group-item {
+  align-items: center;
+  border: unset;
+  color: #828282;
+  display: flex;
+  gap: 1.5rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+.nika-services .container-fluid {
+  margin: 4rem auto 0 auto;
+}
+.nika-services .h4,
+.nika-services h4 {
+  font-size: 40px;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+.nika-services .h4::first-letter,
+.nika-services h4::first-letter {
+  color: #0ec5e5;
+}
+.nika-services .card {
+  border: unset;
+  border-radius: 1.25rem;
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+  height: 260px;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+.nika-services .card:hover .nika-card__content {
+  background: rgba(0, 0, 0, 0.5);
+}
+.nika-services .card:hover picture img {
+  filter: blur(4px);
+}
+.nika-services .card picture img {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  transition: 0.2s;
+  width: 100%;
+}
+.nika-services .nika-card__content {
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  padding: 1.25rem;
+  position: relative;
+  transition: 0.2s;
+  z-index: 2;
+}
+.nika-services .nika-card__heading {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
+  gap: 0.75rem;
+  margin: auto 0 0 0;
+}
+.nika-services .nika-card__heading span {
+  color: #fdc414;
+  font-size: 27px;
+}
+.nika-services .btn {
+  margin-top: 2rem;
+}
+.nika-why-us .container-fluid {
+  margin: 4rem auto 0 auto;
+}
+.nika-why-us .h4,
+.nika-why-us h4 {
+  font-size: 40px;
+  margin-bottom: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.nika-why-us .h4::first-letter,
+.nika-why-us h4::first-letter {
+  color: #0ec5e5;
+}
+.nika-why-us .card {
+  align-items: center;
+  border: unset;
+  border-radius: 1.25rem;
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+  flex-direction: row;
+  gap: 1.5rem;
+  height: 100%;
+  margin: 0;
+  padding: 1.25rem;
+}
+.nika-why-us .card p {
+  margin-bottom: 0;
+}
+.nika-lead-form .nika-section-inner::after,
+.nika-lead-form .nika-section-inner::before {
+  bottom: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  z-index: -1;
+}
+.nika-lead-form .nika-section-inner::before {
+  background: url(../img/lead-form-accent-left.jpg) no-repeat right
+    center;
+  left: 0;
+  width: calc(50% - 383.99px);
+}
+.nika-lead-form .nika-section-inner::after {
+  background: url(../img/lead-form-accent-right.jpg) no-repeat left
+    center;
+  right: 0;
+  width: calc(50% - 383.99px);
+}
+.nika-lead-form .container-fluid {
+  max-width: 767.98px;
+  padding: 4rem 3rem 3.5rem 3rem;
+}
+.nika-lead-form .h5,
+.nika-lead-form h5 {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.nika-lead-form .h5::first-letter,
+.nika-lead-form h5::first-letter {
+  color: #0ec5e5;
+}
+.nika-lead-form .h5 ~ p,
+.nika-lead-form h5 ~ p {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.nika-lead-form form {
+  --bs-body-bg: transparent;
+}
+.nika-lead-form .form-floating label {
+  width: 100%;
+}
+.nika-lead-form .form-floating .iti {
+  width: 100%;
+}
+.nika-lead-form .form-floating .iti__selected-flag {
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+.nika-lead-form .form-floating .iti__country-name {
+  color: #000;
+}
+.nika-lead-form .form-floating .iti__country-list {
+  border: unset;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 20px 30px;
+  margin-top: 10px;
+  z-index: 3;
+}
+.nika-lead-form .form-floating .iti .form-control {
+  height: calc(3.5rem + 2px);
+  padding: 1rem 0.75rem 1rem calc(96px + 0.5rem) !important;
+}
+.nika-lead-form .form-control,
+.nika-lead-form .form-select {
+  background-color: #f5f5f5;
+  border-color: #ddd;
+  border-radius: 0.5rem;
+  font-size: 18px;
+}
+.nika-lead-form .form-control:focus,
+.nika-lead-form .form-select:focus {
+  border-color: #f90;
+  box-shadow: unset;
+}
+.nika-lead-form .btn {
+  min-width: 260px;
+}
+.nika-location {
+  height: 450px;
+}
+.nika-location iframe {
+  border-top-left-radius: 1.75rem;
+  width: 100% !important;
+  position: absolute;
+  inset: 0;
+}
+.nika-modal__title {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+.nika-modal__text {
+  font-size: 16px;
+  margin: 8px 0 24px;
+  text-align: center;
+}
+.modal-body .form-floating label {
+  width: 100%;
+}
+.modal-body .form-floating .iti {
+  width: 100%;
+}
+.modal-body .form-floating .iti__selected-flag {
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+.modal-body .form-floating .iti__country-name {
+  color: #000;
+}
+.modal-body .form-floating .iti__country-list {
+  border: unset;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 20px 30px;
+  margin-top: 10px;
+  z-index: 3;
+}
+.modal-body .form-floating .iti .form-control {
+  height: calc(3.5rem + 2px);
+  padding: 1rem 0.75rem 1rem calc(96px + 0.5rem) !important;
+}
+.modal-body .form-control,
+.modal-body .form-select {
+  background-color: #f5f5f5;
+  border-color: #ddd;
+  border-radius: 0.5rem;
+  font-size: 18px;
+}
+.modal-body .form-control:focus,
+.modal-body .form-select:focus {
+  border-color: #f90;
+  box-shadow: unset;
+}
+.modal-body .form-check-input:checked {
+  background-color: #2fdaef;
+  border-color: #2fdaef;
+}
+.modal-body .form-check-input:focus {
+  box-shadow: unset;
+}
+.modal-body .form-check-label {
+  font-size: 14px;
+  line-height: 1;
+}
+.modal-content {
+  border-radius: 1rem;
+}
+.modal-header {
+  border: unset;
+}
+.modal-header .btn-close:focus {
+  box-shadow: unset;
+}
+.modal-body {
+  padding: 0 2rem 2rem;
+}
+.grecaptcha-badge {
+  display: none;
+}
+@media (max-width: 1399.98px) {
+  header .navbar-nav .nav-item .nav-link {
+    font-size: 18px;
+  }
+  header .nika-header__contacts img {
+    height: 22px;
+    width: auto;
+  }
+  header .nika-header__contacts a {
+    font-size: 20px;
+  }
+  .nika-top-bar .nika-scroll-anchor a,
+  header .nika-scroll-anchor a,
+  section .nika-scroll-anchor a {
+    font-size: 16px;
+    padding: 0 1.25rem;
+  }
+  .btn {
+    font-size: 18px;
+    padding: 0.75rem 2rem;
+  }
+  .nika-hero .container-fluid {
+    min-height: 700px;
+  }
+  .nika-hero .h1,
+  .nika-hero h1 {
+    font-size: calc(1.40625rem + 1.875vw) !important;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 1399.98px) and (min-width: 1200px) {
+  .nika-hero .h1,
+  .nika-hero h1 {
+    font-size: 2.8125rem !important;
+  }
+}
+@media (max-width: 1399.98px) {
+  .nika-hero p {
+    font-size: calc(1.275rem + 0.3vw) !important;
+  }
+}
+@media (max-width: 1399.98px) and (min-width: 1200px) {
+  .nika-hero p {
+    font-size: 1.5rem !important;
+  }
+}
+@media (max-width: 1399.98px) {
+  .nika-destinations .h2,
+  .nika-destinations .h3,
+  .nika-destinations .h4,
+  .nika-destinations .h5,
+  .nika-destinations h2,
+  .nika-destinations h3,
+  .nika-destinations h4,
+  .nika-destinations h5,
+  .nika-hot-offers .h2,
+  .nika-hot-offers .h3,
+  .nika-hot-offers .h4,
+  .nika-hot-offers .h5,
+  .nika-hot-offers h2,
+  .nika-hot-offers h3,
+  .nika-hot-offers h4,
+  .nika-hot-offers h5,
+  .nika-services .h2,
+  .nika-services .h3,
+  .nika-services .h4,
+  .nika-services .h5,
+  .nika-services h2,
+  .nika-services h3,
+  .nika-services h4,
+  .nika-services h5,
+  .nika-why-us .h2,
+  .nika-why-us .h3,
+  .nika-why-us .h4,
+  .nika-why-us .h5,
+  .nika-why-us h2,
+  .nika-why-us h3,
+  .nika-why-us h4,
+  .nika-why-us h5,
+  .nika-lead-form .h2,
+  .nika-lead-form .h3,
+  .nika-lead-form .h4,
+  .nika-lead-form .h5,
+  .nika-lead-form h2,
+  .nika-lead-form h3,
+  .nika-lead-form h4,
+  .nika-lead-form h5 {
+    font-size: calc(1.34375rem + 1.125vw) !important;
+    margin-bottom: 2.5rem;
+  }
+}
+@media (max-width: 1399.98px) and (min-width: 1200px) {
+  .nika-destinations .h2,
+  .nika-destinations .h3,
+  .nika-destinations .h4,
+  .nika-destinations .h5,
+  .nika-destinations h2,
+  .nika-destinations h3,
+  .nika-destinations h4,
+  .nika-destinations h5,
+  .nika-hot-offers .h2,
+  .nika-hot-offers .h3,
+  .nika-hot-offers .h4,
+  .nika-hot-offers .h5,
+  .nika-hot-offers h2,
+  .nika-hot-offers h3,
+  .nika-hot-offers h4,
+  .nika-hot-offers h5,
+  .nika-services .h2,
+  .nika-services .h3,
+  .nika-services .h4,
+  .nika-services .h5,
+  .nika-services h2,
+  .nika-services h3,
+  .nika-services h4,
+  .nika-services h5,
+  .nika-why-us .h2,
+  .nika-why-us .h3,
+  .nika-why-us .h4,
+  .nika-why-us .h5,
+  .nika-why-us h2,
+  .nika-why-us h3,
+  .nika-why-us h4,
+  .nika-why-us h5,
+  .nika-lead-form .h2,
+  .nika-lead-form .h3,
+  .nika-lead-form .h4,
+  .nika-lead-form .h5,
+  .nika-lead-form h2,
+  .nika-lead-form h3,
+  .nika-lead-form h4,
+  .nika-lead-form h5 {
+    font-size: 2.1875rem !important;
+  }
+}
+@media (max-width: 1399.98px) {
+  .nika-lead-form .h5 ~ p,
+  .nika-lead-form h5 ~ p {
+    margin-bottom: 2.5rem;
+  }
+  .nika-cta-vacation .h3,
+  .nika-cta-vacation h3,
+  .nika-cta-exclusive .h3,
+  .nika-cta-exclusive h3 {
+    font-size: calc(1.34375rem + 1.125vw) !important;
+  }
+}
+@media (max-width: 1399.98px) and (min-width: 1200px) {
+  .nika-cta-vacation .h3,
+  .nika-cta-vacation h3,
+  .nika-cta-exclusive .h3,
+  .nika-cta-exclusive h3 {
+    font-size: 2.1875rem !important;
+  }
+}
+@media (max-width: 1399.98px) {
+  .nika-services-showcase .container-fluid {
+    margin-top: 4rem;
+  }
+  .nika-services-showcase .h3,
+  .nika-services-showcase h3 {
+    font-size: calc(1.34375rem + 1.125vw) !important;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 1399.98px) and (min-width: 1200px) {
+  .nika-services-showcase .h3,
+  .nika-services-showcase h3 {
+    font-size: 2.1875rem !important;
+  }
+}
+@media (max-width: 1399.98px) {
+  .nika-modal__title {
+    font-size: 26px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .nika-destinations .card picture img {
+    max-height: 230px;
+  }
+  .nika-hot-offers .card {
+    max-height: 265px;
+  }
+  .nika-hot-offers .nika-offer-card--featured .nika-card__footer {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .nika-hot-offers .nika-offer-card--featured .nika-card__rating {
+    order: -1;
+  }
+  .nika-cta-vacation .container-fluid,
+  .nika-cta-exclusive .container-fluid,
+  .nika-lead-form .container-fluid {
+    padding-bottom: 3.5rem;
+    padding-top: 3.5rem;
+  }
+  .nika-services-showcase .container-fluid,
+  .nika-services .container-fluid,
+  .nika-why-us .container-fluid {
+    margin-top: 3.5rem;
+  }
+  .nika-services .card {
+    max-height: 240px;
+  }
+}
+@media (max-width: 991.98px) {
+  .nika-hero .container-fluid {
+    min-height: 650px;
+  }
+  .nika-cta-vacation .container-fluid,
+  .nika-cta-exclusive .container-fluid {
+    text-align: center;
+  }
+  .nika-cta-vacation .container-fluid > div,
+  .nika-cta-exclusive .container-fluid > div {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .nika-services-showcase .container-fluid {
+    text-align: center;
+  }
+  .nika-services-showcase .nika-showcase-collage {
+    align-items: center;
+    margin-top: 3.5rem;
+  }
+  .nika-services-showcase .nika-showcase-collage img:first-child {
+    width: calc(25% - 0.5rem);
+  }
+  .nika-services-showcase .nika-showcase-collage img:nth-child(2) {
+    width: calc(30% - 0.5rem);
+  }
+  .nika-services-showcase .nika-showcase-collage img:nth-child(3) {
+    align-self: unset;
+    margin: 0 0 0 1rem;
+    width: calc(25% - 0.5rem);
+  }
+  .nika-services-showcase .nika-showcase-collage img:last-child {
+    display: none;
+  }
+  .nika-services-showcase .list-group {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .nika-services-showcase .list-group-item {
+    flex-direction: column;
+    gap: 1rem;
+    width: 25%;
+  }
+  .nika-services-showcase .list-group-item:nth-child(2) {
+    order: -1;
+  }
+  .nika-services .card {
+    max-height: 200px;
+  }
+}
+@media (max-width: 767.98px) {
+  header.hide {
+    transform: translateY(calc(-100% - 6px));
+  }
+  header.header-fixed {
+    margin: 6px 12px;
+    border-radius: 1.25rem;
+    width: calc(100% - 24px) !important;
+    border-color: transparent;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: saturate(150%) blur(15px);
+  }
+  header.header-fixed .navbar {
+    padding-right: 8px;
+  }
+  header.header-fixed .navbar-brand img {
+    height: 60px;
+  }
+  .nika-top-bar .nika-scroll-anchor,
+  header .nika-scroll-anchor,
+  section .nika-scroll-anchor {
+    display: none;
+  }
+  .nika-top-bar .nika-scroll-anchor a,
+  header .nika-scroll-anchor a,
+  section .nika-scroll-anchor a {
+    padding: 0 1rem;
+  }
+  .nika-top-bar .container-fluid,
+  header .container-fluid,
+  section .container-fluid {
+    padding: 0 1.5rem;
+  }
+  .nika-hero .container-fluid {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .nika-hero .h1 br,
+  .nika-hero h1 br,
+  .nika-hero p br {
+    display: none;
+  }
+  .nika-destinations .h2,
+  .nika-destinations .h3,
+  .nika-destinations .h4,
+  .nika-destinations h2,
+  .nika-destinations h3,
+  .nika-destinations h4,
+  .nika-hot-offers .h2,
+  .nika-hot-offers .h3,
+  .nika-hot-offers .h4,
+  .nika-hot-offers h2,
+  .nika-hot-offers h3,
+  .nika-hot-offers h4,
+  .nika-services-showcase .h2,
+  .nika-services-showcase .h3,
+  .nika-services-showcase .h4,
+  .nika-services-showcase h2,
+  .nika-services-showcase h3,
+  .nika-services-showcase h4,
+  .nika-services .h2,
+  .nika-services .h3,
+  .nika-services .h4,
+  .nika-services h2,
+  .nika-services h3,
+  .nika-services h4,
+  .nika-why-us .h2,
+  .nika-why-us .h3,
+  .nika-why-us .h4,
+  .nika-why-us h2,
+  .nika-why-us h3,
+  .nika-why-us h4 {
+    margin-bottom: 2rem;
+  }
+  .nika-destinations .card picture img {
+    max-height: 200px;
+  }
+  .nika-destinations .nika-card__price {
+    left: 1rem;
+    right: unset;
+    top: 1rem;
+  }
+  .nika-hot-offers .container-fluid {
+    margin-top: 2rem;
+  }
+  .nika-hot-offers .h2,
+  .nika-hot-offers h2 {
+    text-align: center;
+  }
+  .nika-hot-offers .card {
+    max-height: 245px;
+  }
+  .nika-hot-offers .nika-card__meta-days img,
+  .nika-hot-offers .nika-card__meta-guests img {
+    display: none;
+  }
+  .nika-cta-vacation .nika-section-inner,
+  .nika-cta-exclusive .nika-section-inner {
+    border-radius: unset;
+  }
+  .nika-cta-vacation .container-fluid,
+  .nika-cta-exclusive .container-fluid,
+  .nika-lead-form .container-fluid {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .nika-services-showcase .nika-showcase-collage {
+    align-items: flex-end;
+    margin: 3rem auto 0 auto;
+    max-width: 460px;
+  }
+  .nika-services-showcase .nika-showcase-collage img:first-child {
+    width: calc(45% - 0.5rem);
+  }
+  .nika-services-showcase .nika-showcase-collage img:nth-child(2) {
+    width: calc(55% - 0.5rem);
+  }
+  .nika-services-showcase .nika-showcase-collage img:nth-child(3) {
+    align-self: flex-start;
+    margin: 1rem 1rem 0 0;
+    width: 32.5%;
+  }
+  .nika-services-showcase .nika-showcase-collage img:last-child {
+    display: block;
+  }
+  .nika-services-showcase .list-group {
+    flex-direction: column;
+  }
+  .nika-services-showcase .list-group-item {
+    width: 100%;
+  }
+  .nika-services .h4,
+  .nika-services h4 {
+    text-align: center;
+  }
+  .nika-services .card {
+    max-height: 180px;
+  }
+  .nika-lead-form .nika-section-inner::before {
+    display: none;
+  }
+  .nika-lead-form .nika-section-inner::after {
+    background-position: center;
+    height: 50%;
+    top: auto;
+    width: 100%;
+  }
+  .nika-location iframe {
+    border-radius: unset;
+  }
+}
+@media (max-width: 575.98px) {
+  .nika-top-bar .container-fluid,
+  header .container-fluid,
+  section .container-fluid {
+    padding: 0 0.75rem;
+  }
+  header {
+    top: 0;
+  }
+  header .navbar-brand img {
+    height: 77px;
+    width: auto;
+  }
+  .nika-top-bar {
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+    z-index: 999;
+  }
+  .nika-top-bar .nika-social {
+    gap: 10px;
+  }
+  .nika-top-bar .nika-lang-switch {
+    margin-right: 24px;
+  }
+  .nika-top-bar .nika-offers-banner {
+    display: none;
+  }
+  .nika-destinations .card {
+    flex-direction: row;
+    min-height: 200px;
+  }
+  .nika-destinations .card picture {
+    flex-shrink: 0;
+    width: 45%;
+  }
+  .nika-destinations .card picture img {
+    height: 100%;
+    max-height: 100%;
+  }
+  .nika-hot-offers .container-fluid {
+    margin-top: 2.5rem;
+  }
+  .nika-services-showcase .h3,
+  .nika-services-showcase h3 {
+    text-align: center;
+  }
+  .nika-services-showcase .list-group-item {
+    flex-direction: row;
+    padding: 10px 0;
+  }
+  .nika-services .card {
+    max-height: 160px;
+  }
+  .nika-lead-form .nika-section-inner::after {
+    background: 0 0;
+  }
+  .nika-lead-form .btn {
+    max-width: 260px;
+    min-width: auto;
+    width: 75%;
+  }
+}
+/* Spacer when the main lead form is removed */
+.nika-lead-form__placeholder {
+  min-height: min(60vh, 520px);
+}
