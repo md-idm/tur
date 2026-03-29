@@ -50,7 +50,7 @@ document.querySelectorAll('form input[name="phone"]').forEach(function (el) {
   });
 });
 
-document.querySelectorAll(".nika-nav-anchor").forEach(function (el) {
+document.querySelectorAll(".dar-nav-anchor").forEach(function (el) {
   el.addEventListener("click", function () {
     const href = this.getAttribute("href");
     if (href && href.startsWith("#")) {
@@ -69,7 +69,7 @@ document.querySelectorAll(".nika-nav-anchor").forEach(function (el) {
   }
 })();
 
-$(".nika-cta-vacation .btn, .nika-services .btn, .nika-cta-exclusive .btn").on(
+$(".dar-cta-vacation .btn, .dar-services .btn, .dar-cta-exclusive .btn").on(
   "click",
   function () {
     window.dataLayer = window.dataLayer || [];
@@ -159,13 +159,13 @@ $("form").on("submit", function (e) {
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 gsap.fromTo(
-  ".nika-hero picture img",
+  ".dar-hero picture img",
   { scale: 1 },
   {
     scale: 1.3,
     ease: "none",
     scrollTrigger: {
-      trigger: ".nika-hero",
+      trigger: ".dar-hero",
       start: "top top",
       end: "bottom top",
       scrub: true,
@@ -174,7 +174,7 @@ gsap.fromTo(
 );
 
 gsap.utils
-  .toArray(".nika-hero .btn, .nika-destinations .card, .nika-services .card")
+  .toArray(".dar-hero .btn, .dar-destinations .card, .dar-services .card")
   .forEach(function (el) {
     ScrollTrigger.create({
       trigger: el,
@@ -188,7 +188,7 @@ gsap.utils
 
 gsap.utils
   .toArray(
-    '.nika-hero h1, .nika-hero p, .nika-hot-offers .row > div[class^="col"]:nth-child(4), .nika-hot-offers .row > div[class^="col"]:nth-child(7)'
+    '.dar-hero h1, .dar-hero p, .dar-hot-offers .row > div[class^="col"]:nth-child(4), .dar-hot-offers .row > div[class^="col"]:nth-child(7)'
   )
   .forEach(function (el) {
     ScrollTrigger.create({
@@ -202,7 +202,7 @@ gsap.utils
   });
 
 gsap.utils
-  .toArray('.nika-hot-offers .row > div[class^="col"]:nth-child(3)')
+  .toArray('.dar-hot-offers .row > div[class^="col"]:nth-child(3)')
   .forEach(function (el) {
     ScrollTrigger.create({
       trigger: el,
@@ -216,7 +216,7 @@ gsap.utils
 
 gsap.utils
   .toArray(
-    '.nika-hot-offers .row > div[class^="col"]:nth-child(2), .nika-hot-offers .row > div[class^="col"]:nth-child(5), .nika-hot-offers .row > div[class^="col"]:nth-child(6)'
+    '.dar-hot-offers .row > div[class^="col"]:nth-child(2), .dar-hot-offers .row > div[class^="col"]:nth-child(5), .dar-hot-offers .row > div[class^="col"]:nth-child(6)'
   )
   .forEach(function (el) {
     ScrollTrigger.create({
@@ -229,7 +229,7 @@ gsap.utils
     });
   });
 
-gsap.utils.toArray(".nika-services-showcase .nika-showcase-collage img").forEach(function (el) {
+gsap.utils.toArray(".dar-services-showcase .dar-showcase-collage img").forEach(function (el) {
   ScrollTrigger.create({
     trigger: el,
     start: "top 90%",
@@ -240,7 +240,7 @@ gsap.utils.toArray(".nika-services-showcase .nika-showcase-collage img").forEach
   });
 });
 
-gsap.utils.toArray(".nika-why-us .card").forEach(function (el) {
+gsap.utils.toArray(".dar-why-us .card").forEach(function (el) {
   ScrollTrigger.create({
     trigger: el,
     start: "top 90%",

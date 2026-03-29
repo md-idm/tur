@@ -33,6 +33,15 @@
   --bs-body-font-size: 18px;
   --bs-body-line-height: 1.2;
   --bs-body-color: #000000;
+  /* Dartur palette */
+  --dar-cream: #feffb7;
+  --dar-gold: #f3ca56;
+  --dar-gold-deep: #c9a030;
+  --dar-gold-border: #e8b848;
+  --dar-teal: #477373;
+  --dar-teal-soft: #5a7979;
+  --dar-blue: #1c89b8;
+  --dar-text-on-gold: #1a2e2e;
 }
 i[class^="icon-"] {
   color: #000;
@@ -76,32 +85,32 @@ h4,
 h5 {
   font-weight: 700;
 }
-.nika-top-bar,
+.dar-top-bar,
 header,
 section {
   display: flex;
 }
-.nika-top-bar .nika-scroll-anchor,
-header .nika-scroll-anchor,
-section .nika-scroll-anchor {
+.dar-top-bar .dar-scroll-anchor,
+header .dar-scroll-anchor,
+section .dar-scroll-anchor {
   background-color: #fff;
-  border-right: 1px solid #e1e1e1;
+  border-right: 1px solid rgba(71, 115, 115, 0.18);
   display: flex;
   justify-content: center;
   position: relative;
   z-index: 2;
 }
-.nika-top-bar .nika-scroll-anchor a,
-header .nika-scroll-anchor a,
-section .nika-scroll-anchor a {
-  color: #4c5461;
+.dar-top-bar .dar-scroll-anchor a,
+header .dar-scroll-anchor a,
+section .dar-scroll-anchor a {
+  color: var(--dar-teal);
   padding: 0 1.75rem;
   text-align: end;
   text-decoration: none;
   width: 100%;
   writing-mode: vertical-lr;
 }
-.nika-top-bar .container-fluid,
+.dar-top-bar .container-fluid,
 header .container-fluid,
 section .container-fluid {
   max-width: 1308px;
@@ -111,13 +120,13 @@ section .container-fluid {
   --bs-gutter-x: 1rem;
 }
 .btn {
-  background: linear-gradient(180deg, #ffd03d, #f90);
-  border: 2px solid #ffd03d;
+  background: linear-gradient(180deg, var(--dar-gold), var(--dar-gold-deep));
+  border: 2px solid var(--dar-gold-border);
   border-radius: 50rem;
   box-shadow:
     rgba(0, 0, 0, 0.1) 0 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0 10px 10px -5px !important;
-  color: #fff;
+  color: var(--dar-text-on-gold);
   flex-shrink: 0;
   font-size: 20px;
   font-weight: 500;
@@ -127,13 +136,13 @@ section .container-fluid {
   transition: 0.25s;
 }
 .btn:hover {
-  color: #fff;
-  background: linear-gradient(180deg, #ffd03d, #f90);
-  border: 2px solid #ffd03d;
-  filter: brightness(110%);
+  color: var(--dar-text-on-gold);
+  background: linear-gradient(180deg, #fce06a, #d4a832);
+  border: 2px solid var(--dar-gold-border);
+  filter: brightness(105%);
 }
 .btn:active {
-  border: 2px solid #ffd03d !important;
+  border: 2px solid var(--dar-gold-border) !important;
 }
 .btn::after {
   animation: btnAnimation 3.5s ease-in-out infinite;
@@ -170,16 +179,16 @@ section .container-fluid {
     transition-property: left, top, opacity;
   }
 }
-.nika-top-bar {
+.dar-top-bar {
   padding: 10px 0;
 }
-.nika-top-bar .nika-channel-buttons,
-.nika-top-bar .nika-social {
+.dar-top-bar .dar-channel-buttons,
+.dar-top-bar .dar-social {
   display: flex;
   gap: 14px;
 }
-.nika-top-bar .nika-channel-buttons a,
-.nika-top-bar .nika-social a {
+.dar-top-bar .dar-channel-buttons a,
+.dar-top-bar .dar-social a {
   align-items: center;
   border-radius: 50%;
   display: flex;
@@ -188,48 +197,48 @@ section .container-fluid {
   text-decoration: none;
   width: 30px;
 }
-.nika-top-bar .nika-channel-buttons a i,
-.nika-top-bar .nika-social a i {
-  color: #ffcf3c;
+.dar-top-bar .dar-channel-buttons a i,
+.dar-top-bar .dar-social a i {
+  color: var(--dar-gold);
   font-size: 19px;
 }
-.nika-top-bar .nika-channel-buttons a i.icon-facebook,
-.nika-top-bar .nika-social a i.icon-facebook {
-  color: #0766ff;
+.dar-top-bar .dar-channel-buttons a i.icon-facebook,
+.dar-top-bar .dar-social a i.icon-facebook {
+  color: var(--dar-blue);
 }
-.nika-top-bar .nika-channel-buttons a i.icon-instagram,
-.nika-top-bar .nika-social a i.icon-instagram {
+.dar-top-bar .dar-channel-buttons a i.icon-instagram,
+.dar-top-bar .dar-social a i.icon-instagram {
   color: #e1306c;
 }
-.nika-top-bar .nika-channel-buttons a i.icon-tiktok,
-.nika-top-bar .nika-social a i.icon-tiktok {
+.dar-top-bar .dar-channel-buttons a i.icon-tiktok,
+.dar-top-bar .dar-social a i.icon-tiktok {
   color: #000;
 }
-.nika-top-bar .nika-lang-switch {
+.dar-top-bar .dar-lang-switch {
   display: flex;
   margin-left: auto;
 }
-.nika-top-bar .nika-lang-switch a,
-.nika-top-bar .nika-lang-switch .nika-lang-switch__link,
-.nika-top-bar .nika-lang-switch .nika-lang-switch__current {
+.dar-top-bar .dar-lang-switch a,
+.dar-top-bar .dar-lang-switch .dar-lang-switch__link,
+.dar-top-bar .dar-lang-switch .dar-lang-switch__current {
   color: #000;
   display: block;
   font-size: 16px;
   padding: 0 6px;
   text-decoration: none;
 }
-.nika-top-bar .nika-lang-switch .nika-lang-switch__link:hover {
+.dar-top-bar .dar-lang-switch .dar-lang-switch__link:hover {
   color: #000;
 }
-.nika-top-bar .nika-lang-switch .nika-lang-switch__current {
+.dar-top-bar .dar-lang-switch .dar-lang-switch__current {
   cursor: default;
   font-weight: 600;
 }
-.nika-top-bar .nika-lang-switch > *:first-child {
+.dar-top-bar .dar-lang-switch > *:first-child {
   position: relative;
 }
-.nika-top-bar .nika-lang-switch > *:first-child::after {
-  background-color: #e1e1e1;
+.dar-top-bar .dar-lang-switch > *:first-child::after {
+  background-color: rgba(71, 115, 115, 0.12);
   content: "";
   height: 100%;
   position: absolute;
@@ -237,20 +246,20 @@ section .container-fluid {
   transform: rotate(15deg);
   width: 1px;
 }
-.nika-top-bar .nika-channel-buttons {
+.dar-top-bar .dar-channel-buttons {
   gap: 12px;
 }
-.nika-top-bar .nika-offers-banner {
+.dar-top-bar .dar-offers-banner {
   font-size: 13px;
   margin: 0 16px 0 32px;
 }
-.nika-top-bar .nika-channel-buttons a.nika-channel--telegram {
-  background-color: #3390ec;
+.dar-top-bar .dar-channel-buttons a.dar-channel--telegram {
+  background-color: var(--dar-blue);
 }
-.nika-top-bar .nika-channel-buttons a.nika-channel--viber {
-  background-color: #6c4ed0;
+.dar-top-bar .dar-channel-buttons a.dar-channel--viber {
+  background-color: var(--dar-teal);
 }
-.nika-top-bar .nika-channel-buttons a i {
+.dar-top-bar .dar-channel-buttons a i {
   color: #fff;
   font-size: 16px;
 }
@@ -268,7 +277,7 @@ header.hide {
 header.header-fixed {
   background: #fff;
   box-shadow: 0 12px 20px rgba(44, 43, 43, 0.08);
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid rgba(71, 115, 115, 0.15);
   position: fixed;
   top: 0;
 }
@@ -282,16 +291,16 @@ header.header-fixed .navbar-brand img {
 header.header-fixed .navbar-nav .nav-item .nav-link {
   color: #000;
 }
-header.header-fixed .nika-header__contacts > div:nth-child(2) {
+header.header-fixed .dar-header__contacts > div:nth-child(2) {
   display: none !important;
 }
-header.header-fixed .nika-header__contacts a {
-  color: #2fdaef;
+header.header-fixed .dar-header__contacts a {
+  color: var(--dar-blue);
 }
-header.header-fixed .nika-header__contacts-telegram {
+header.header-fixed .dar-header__contacts-telegram {
   display: none;
 }
-header .nika-scroll-anchor {
+header .dar-scroll-anchor {
   border: unset;
 }
 header .navbar-nav .nav-item .nav-link {
@@ -300,19 +309,19 @@ header .navbar-nav .nav-item .nav-link {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-header .nika-header__contacts a {
+header .dar-header__contacts a {
   color: #fff;
   display: block;
   font-size: 22px;
   font-weight: 600;
   text-decoration: none;
 }
-header .nika-header__contacts a:hover {
-  color: #2fdaef;
+header .dar-header__contacts a:hover {
+  color: var(--dar-blue);
 }
-header .nika-header__contacts-telegram {
+header .dar-header__contacts-telegram {
   align-items: center;
-  background-color: #2fdaef;
+  background-color: var(--dar-blue);
   border-radius: 50rem;
   display: flex;
   justify-content: space-evenly;
@@ -320,25 +329,25 @@ header .nika-header__contacts-telegram {
   padding: 8px 14px 8px 8px;
   width: 100%;
 }
-header .nika-header__contacts-telegram a {
+header .dar-header__contacts-telegram a {
   font-size: 14px !important;
 }
-header .nika-header__contacts-telegram a:hover {
+header .dar-header__contacts-telegram a:hover {
   color: #fff;
 }
-.nika-hero .nika-section-inner {
+.dar-hero .dar-section-inner {
   border-bottom-left-radius: 1.75rem;
   overflow: hidden;
 }
-.nika-hero .container-fluid {
+.dar-hero .container-fluid {
   align-items: center;
   display: flex;
   justify-content: center;
   min-height: 750px;
   padding: calc(124px + 3.5rem) 3rem calc(78px + 3.5rem) 3rem;
 }
-.nika-hero .h1,
-.nika-hero h1 {
+.dar-hero .h1,
+.dar-hero h1 {
   color: #fff;
   font-size: 50px;
   margin-bottom: 2.5rem;
@@ -346,13 +355,13 @@ header .nika-header__contacts-telegram a:hover {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
 }
-.nika-hero .h1 span,
-.nika-hero .h1::first-letter,
-.nika-hero h1 span,
-.nika-hero h1::first-letter {
-  color: #2fdaef;
+.dar-hero .h1 span,
+.dar-hero .h1::first-letter,
+.dar-hero h1 span,
+.dar-hero h1::first-letter {
+  color: var(--dar-gold);
 }
-.nika-hero p {
+.dar-hero p {
   animation-delay: 0.25s;
   color: #fff;
   font-size: 28px;
@@ -360,12 +369,12 @@ header .nika-header__contacts-telegram a:hover {
   text-align: center;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
-.nika-hero .btn {
+.dar-hero .btn {
   animation-delay: 0.75s;
   display: table;
   margin: 0 auto;
 }
-.nika-hero .nika-hero-media {
+.dar-hero .dar-hero-media {
   bottom: 0;
   left: 0;
   overflow: hidden;
@@ -374,8 +383,8 @@ header .nika-header__contacts-telegram a:hover {
   top: 0;
   z-index: -1;
 }
-.nika-hero .nika-hero-media::after {
-  background: rgba(55, 67, 115, 0.4);
+.dar-hero .dar-hero-media::after {
+  background: rgba(71, 115, 115, 0.42);
   bottom: 0;
   content: "";
   left: 0;
@@ -384,28 +393,28 @@ header .nika-header__contacts-telegram a:hover {
   top: 0;
   z-index: 1;
 }
-.nika-hero .nika-hero-media img,
-.nika-hero .nika-hero-media video {
+.dar-hero .dar-hero-media img,
+.dar-hero .dar-hero-media video {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
 }
-.nika-destinations .container-fluid {
+.dar-destinations .container-fluid {
   margin: calc(3.5rem - 20px) auto 0 auto;
 }
-.nika-destinations .h2,
-.nika-destinations h2 {
+.dar-destinations .h2,
+.dar-destinations h2 {
   font-size: 40px;
   margin-bottom: 3rem;
   text-align: center;
   text-transform: uppercase;
 }
-.nika-destinations .h2::first-letter,
-.nika-destinations h2::first-letter {
-  color: #0ec5e5;
+.dar-destinations .h2::first-letter,
+.dar-destinations h2::first-letter {
+  color: var(--dar-blue);
 }
-.nika-destinations .card {
+.dar-destinations .card {
   border: unset;
   border-radius: 1.25rem;
   box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
@@ -414,24 +423,24 @@ header .nika-header__contacts-telegram a:hover {
   overflow: hidden;
   position: relative;
 }
-.nika-destinations .card picture img {
+.dar-destinations .card picture img {
   height: 260px;
   -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
 }
-.nika-destinations .nika-card__content {
+.dar-destinations .dar-card__content {
   display: flex;
   flex-direction: column;
   padding: 1.25rem;
 }
-.nika-destinations .nika-card__heading {
+.dar-destinations .dar-card__heading {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
-.nika-destinations .nika-card__price {
-  background: #2fdaef;
+.dar-destinations .dar-card__price {
+  background: var(--dar-blue);
   border-radius: 50rem;
   color: #fff;
   font-weight: 500;
@@ -441,32 +450,32 @@ header .nika-header__contacts-telegram a:hover {
   right: 1.25rem;
   top: 1.25rem;
 }
-.nika-destinations .nika-card__route {
-  color: #828282;
+.dar-destinations .dar-card__route {
+  color: var(--dar-teal-soft);
   margin-bottom: 1.25rem;
 }
-.nika-destinations .nika-card__cta {
+.dar-destinations .dar-card__cta {
   align-items: center;
-  color: #2fdaef;
+  color: var(--dar-blue);
   display: flex;
   gap: 0.5rem;
   margin-top: auto;
   text-decoration: none;
 }
-.nika-hot-offers .container-fluid {
+.dar-hot-offers .container-fluid {
   margin: 0.5rem auto 0 auto;
 }
-.nika-hot-offers .h2,
-.nika-hot-offers h2 {
+.dar-hot-offers .h2,
+.dar-hot-offers h2 {
   font-size: 40px;
   margin-bottom: 3rem;
   text-transform: uppercase;
 }
-.nika-hot-offers .h2::first-letter,
-.nika-hot-offers h2::first-letter {
-  color: #0ec5e5;
+.dar-hot-offers .h2::first-letter,
+.dar-hot-offers h2::first-letter {
+  color: var(--dar-blue);
 }
-.nika-hot-offers .card {
+.dar-hot-offers .card {
   border: unset;
   border-radius: 1.25rem;
   box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
@@ -475,20 +484,20 @@ header .nika-header__contacts-telegram a:hover {
   overflow: hidden;
   position: relative;
 }
-.nika-hot-offers .card:hover .nika-card__content {
+.dar-hot-offers .card:hover .dar-card__content {
   background: rgba(0, 0, 0, 0.5);
 }
-.nika-hot-offers .card:hover picture img {
+.dar-hot-offers .card:hover picture img {
   filter: blur(4px);
 }
-.nika-hot-offers .nika-offer-card--compact .nika-card__footer {
+.dar-hot-offers .dar-offer-card--compact .dar-card__footer {
   flex-direction: column;
   gap: 0.25rem;
 }
-.nika-hot-offers .nika-offer-card--compact .nika-card__rating {
+.dar-hot-offers .dar-offer-card--compact .dar-card__rating {
   order: -1;
 }
-.nika-hot-offers .card picture img {
+.dar-hot-offers .card picture img {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
@@ -496,7 +505,7 @@ header .nika-header__contacts-telegram a:hover {
   transition: 0.2s;
   width: 100%;
 }
-.nika-hot-offers .nika-card__content {
+.dar-hot-offers .dar-card__content {
   background: rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
@@ -506,13 +515,13 @@ header .nika-header__contacts-telegram a:hover {
   transition: 0.2s;
   z-index: 2;
 }
-.nika-hot-offers .nika-card__header {
+.dar-hot-offers .dar-card__header {
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
 }
-.nika-hot-offers .nika-card__meta-days,
-.nika-hot-offers .nika-card__meta-guests {
+.dar-hot-offers .dar-card__meta-days,
+.dar-hot-offers .dar-card__meta-guests {
   color: #fff;
   display: flex;
   font-size: 16px;
@@ -520,128 +529,128 @@ header .nika-header__contacts-telegram a:hover {
   gap: 0.5rem;
   margin-bottom: 0;
 }
-.nika-hot-offers .nika-card__meta-days {
+.dar-hot-offers .dar-card__meta-days {
   margin-bottom: 0.25rem;
 }
-.nika-hot-offers .nika-card__price-tag {
-  background: #2fdaef;
+.dar-hot-offers .dar-card__price-tag {
+  background: var(--dar-blue);
   border-radius: 50rem;
   color: #fff;
   font-weight: 500;
   margin: 0;
   padding: 10px 12px;
 }
-.nika-hot-offers .nika-card__footer {
+.dar-hot-offers .dar-card__footer {
   display: flex;
   gap: 1.5rem;
   justify-content: space-between;
 }
-.nika-hot-offers .nika-card__destination-title {
+.dar-hot-offers .dar-card__destination-title {
   color: #fff;
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 0.25rem;
 }
-.nika-hot-offers .nika-card__destination-note {
+.dar-hot-offers .dar-card__destination-note {
   color: #fff;
   margin-bottom: 0;
 }
-.nika-cta-vacation .nika-section-inner,
-.nika-cta-exclusive .nika-section-inner {
-  background: url(../img/cta-vacation-pattern.png) #0ad4ec;
+.dar-cta-vacation .dar-section-inner,
+.dar-cta-exclusive .dar-section-inner {
+  background: url(../img/cta-vacation-pattern.png) var(--dar-blue);
   border-bottom-left-radius: 1.75rem;
   border-top-left-radius: 1.75rem;
   margin-top: 3rem;
 }
-.nika-cta-vacation .container-fluid,
-.nika-cta-exclusive .container-fluid {
+.dar-cta-vacation .container-fluid,
+.dar-cta-exclusive .container-fluid {
   max-width: 1308px;
   padding: 4rem 3rem;
 }
-.nika-cta-vacation .container-fluid > div,
-.nika-cta-exclusive .container-fluid > div {
+.dar-cta-vacation .container-fluid > div,
+.dar-cta-exclusive .container-fluid > div {
   gap: 3rem;
 }
-.nika-cta-vacation .h3,
-.nika-cta-vacation h3,
-.nika-cta-exclusive .h3,
-.nika-cta-exclusive h3 {
+.dar-cta-vacation .h3,
+.dar-cta-vacation h3,
+.dar-cta-exclusive .h3,
+.dar-cta-exclusive h3 {
   color: #fff;
   font-size: 40px;
   text-transform: uppercase;
 }
-.nika-cta-vacation p,
-.nika-cta-exclusive p {
+.dar-cta-vacation p,
+.dar-cta-exclusive p {
   color: #fff;
 }
-.nika-services-showcase .container-fluid {
+.dar-services-showcase .container-fluid {
   margin: 4.5rem auto 0 auto;
 }
-.nika-services-showcase .nika-showcase-collage {
+.dar-services-showcase .dar-showcase-collage {
   align-items: flex-end;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.nika-services-showcase .nika-showcase-collage img {
+.dar-services-showcase .dar-showcase-collage img {
   border-radius: 1.25rem;
 }
-.nika-services-showcase .nika-showcase-collage img:first-child {
+.dar-services-showcase .dar-showcase-collage img:first-child {
   margin-right: 1rem;
   width: calc(45% - 0.5rem);
 }
-.nika-services-showcase .nika-showcase-collage img:nth-child(2) {
+.dar-services-showcase .dar-showcase-collage img:nth-child(2) {
   width: calc(55% - 0.5rem);
 }
-.nika-services-showcase .nika-showcase-collage img:nth-child(3) {
+.dar-services-showcase .dar-showcase-collage img:nth-child(3) {
   align-self: flex-start;
   margin: 1rem 1rem 0 0;
   width: 32.5%;
 }
-.nika-services-showcase .nika-showcase-collage img:last-child {
+.dar-services-showcase .dar-showcase-collage img:last-child {
   align-self: flex-start;
   margin-top: 1rem;
   width: calc(45% - 1rem);
 }
-.nika-services-showcase .h3,
-.nika-services-showcase h3 {
+.dar-services-showcase .h3,
+.dar-services-showcase h3 {
   font-size: 40px;
   margin-bottom: 2.5rem;
   text-transform: uppercase;
 }
-.nika-services-showcase .h3::first-letter,
-.nika-services-showcase h3::first-letter {
-  color: #0ec5e5;
+.dar-services-showcase .h3::first-letter,
+.dar-services-showcase h3::first-letter {
+  color: var(--dar-blue);
 }
-.nika-services-showcase p {
-  color: #828282;
+.dar-services-showcase p {
+  color: var(--dar-teal-soft);
 }
-.nika-services-showcase .list-group {
+.dar-services-showcase .list-group {
   margin-bottom: 1.25rem;
 }
-.nika-services-showcase .list-group-item {
+.dar-services-showcase .list-group-item {
   align-items: center;
   border: unset;
-  color: #828282;
+  color: var(--dar-teal-soft);
   display: flex;
   gap: 1.5rem;
   padding-left: 0;
   padding-right: 0;
 }
-.nika-services .container-fluid {
+.dar-services .container-fluid {
   margin: 4rem auto 0 auto;
 }
-.nika-services .h4,
-.nika-services h4 {
+.dar-services .h4,
+.dar-services h4 {
   font-size: 40px;
   margin-bottom: 3rem;
   text-transform: uppercase;
 }
-.nika-services .h4::first-letter,
-.nika-services h4::first-letter {
-  color: #0ec5e5;
+.dar-services .h4::first-letter,
+.dar-services h4::first-letter {
+  color: var(--dar-blue);
 }
-.nika-services .card {
+.dar-services .card {
   border: unset;
   border-radius: 1.25rem;
   box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
@@ -650,13 +659,13 @@ header .nika-header__contacts-telegram a:hover {
   overflow: hidden;
   position: relative;
 }
-.nika-services .card:hover .nika-card__content {
+.dar-services .card:hover .dar-card__content {
   background: rgba(0, 0, 0, 0.5);
 }
-.nika-services .card:hover picture img {
+.dar-services .card:hover picture img {
   filter: blur(4px);
 }
-.nika-services .card picture img {
+.dar-services .card picture img {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
@@ -664,7 +673,7 @@ header .nika-header__contacts-telegram a:hover {
   transition: 0.2s;
   width: 100%;
 }
-.nika-services .nika-card__content {
+.dar-services .dar-card__content {
   background: rgba(0, 0, 0, 0.3);
   display: flex;
   padding: 1.25rem;
@@ -672,7 +681,7 @@ header .nika-header__contacts-telegram a:hover {
   transition: 0.2s;
   z-index: 2;
 }
-.nika-services .nika-card__heading {
+.dar-services .dar-card__heading {
   align-items: center;
   color: #fff;
   display: flex;
@@ -681,28 +690,28 @@ header .nika-header__contacts-telegram a:hover {
   gap: 0.75rem;
   margin: auto 0 0 0;
 }
-.nika-services .nika-card__heading span {
-  color: #fdc414;
+.dar-services .dar-card__heading span {
+  color: var(--dar-gold);
   font-size: 27px;
 }
-.nika-services .btn {
+.dar-services .btn {
   margin-top: 2rem;
 }
-.nika-why-us .container-fluid {
+.dar-why-us .container-fluid {
   margin: 4rem auto 0 auto;
 }
-.nika-why-us .h4,
-.nika-why-us h4 {
+.dar-why-us .h4,
+.dar-why-us h4 {
   font-size: 40px;
   margin-bottom: 3rem;
   text-align: center;
   text-transform: uppercase;
 }
-.nika-why-us .h4::first-letter,
-.nika-why-us h4::first-letter {
-  color: #0ec5e5;
+.dar-why-us .h4::first-letter,
+.dar-why-us h4::first-letter {
+  color: var(--dar-blue);
 }
-.nika-why-us .card {
+.dar-why-us .card {
   align-items: center;
   border: unset;
   border-radius: 1.25rem;
@@ -713,11 +722,11 @@ header .nika-header__contacts-telegram a:hover {
   margin: 0;
   padding: 1.25rem;
 }
-.nika-why-us .card p {
+.dar-why-us .card p {
   margin-bottom: 0;
 }
-.nika-lead-form .nika-section-inner::after,
-.nika-lead-form .nika-section-inner::before {
+.dar-lead-form .dar-section-inner::after,
+.dar-lead-form .dar-section-inner::before {
   bottom: 0;
   content: "";
   position: absolute;
@@ -725,95 +734,95 @@ header .nika-header__contacts-telegram a:hover {
   width: 50%;
   z-index: -1;
 }
-.nika-lead-form .nika-section-inner::before {
+.dar-lead-form .dar-section-inner::before {
   background: url(../img/lead-form-accent-left.jpg) no-repeat right
     center;
   left: 0;
   width: calc(50% - 383.99px);
 }
-.nika-lead-form .nika-section-inner::after {
+.dar-lead-form .dar-section-inner::after {
   background: url(../img/lead-form-accent-right.jpg) no-repeat left
     center;
   right: 0;
   width: calc(50% - 383.99px);
 }
-.nika-lead-form .container-fluid {
+.dar-lead-form .container-fluid {
   max-width: 767.98px;
   padding: 4rem 3rem 3.5rem 3rem;
 }
-.nika-lead-form .h5,
-.nika-lead-form h5 {
+.dar-lead-form .h5,
+.dar-lead-form h5 {
   font-size: 40px;
   text-align: center;
   text-transform: uppercase;
 }
-.nika-lead-form .h5::first-letter,
-.nika-lead-form h5::first-letter {
-  color: #0ec5e5;
+.dar-lead-form .h5::first-letter,
+.dar-lead-form h5::first-letter {
+  color: var(--dar-blue);
 }
-.nika-lead-form .h5 ~ p,
-.nika-lead-form h5 ~ p {
+.dar-lead-form .h5 ~ p,
+.dar-lead-form h5 ~ p {
   margin-bottom: 3rem;
   text-align: center;
 }
-.nika-lead-form form {
+.dar-lead-form form {
   --bs-body-bg: transparent;
 }
-.nika-lead-form .form-floating label {
+.dar-lead-form .form-floating label {
   width: 100%;
 }
-.nika-lead-form .form-floating .iti {
+.dar-lead-form .form-floating .iti {
   width: 100%;
 }
-.nika-lead-form .form-floating .iti__selected-flag {
+.dar-lead-form .form-floating .iti__selected-flag {
   border-bottom-left-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
 }
-.nika-lead-form .form-floating .iti__country-name {
+.dar-lead-form .form-floating .iti__country-name {
   color: #000;
 }
-.nika-lead-form .form-floating .iti__country-list {
+.dar-lead-form .form-floating .iti__country-list {
   border: unset;
   border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0 20px 30px;
   margin-top: 10px;
   z-index: 3;
 }
-.nika-lead-form .form-floating .iti .form-control {
+.dar-lead-form .form-floating .iti .form-control {
   height: calc(3.5rem + 2px);
   padding: 1rem 0.75rem 1rem calc(96px + 0.5rem) !important;
 }
-.nika-lead-form .form-control,
-.nika-lead-form .form-select {
-  background-color: #f5f5f5;
-  border-color: #ddd;
+.dar-lead-form .form-control,
+.dar-lead-form .form-select {
+  background-color: rgba(254, 255, 183, 0.28);
+  border-color: rgba(71, 115, 115, 0.22);
   border-radius: 0.5rem;
   font-size: 18px;
 }
-.nika-lead-form .form-control:focus,
-.nika-lead-form .form-select:focus {
-  border-color: #f90;
+.dar-lead-form .form-control:focus,
+.dar-lead-form .form-select:focus {
+  border-color: var(--dar-blue);
   box-shadow: unset;
 }
-.nika-lead-form .btn {
+.dar-lead-form .btn {
   min-width: 260px;
 }
-.nika-location {
+.dar-location {
   height: 450px;
 }
-.nika-location iframe {
+.dar-location iframe {
   border-top-left-radius: 1.75rem;
   width: 100% !important;
   position: absolute;
   inset: 0;
 }
-.nika-modal__title {
+.dar-modal__title {
   font-size: 30px;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
 }
-.nika-modal__text {
+.dar-modal__text {
   font-size: 16px;
   margin: 8px 0 24px;
   text-align: center;
@@ -844,19 +853,19 @@ header .nika-header__contacts-telegram a:hover {
 }
 .modal-body .form-control,
 .modal-body .form-select {
-  background-color: #f5f5f5;
-  border-color: #ddd;
+  background-color: rgba(254, 255, 183, 0.28);
+  border-color: rgba(71, 115, 115, 0.22);
   border-radius: 0.5rem;
   font-size: 18px;
 }
 .modal-body .form-control:focus,
 .modal-body .form-select:focus {
-  border-color: #f90;
+  border-color: var(--dar-blue);
   box-shadow: unset;
 }
 .modal-body .form-check-input:checked {
-  background-color: #2fdaef;
-  border-color: #2fdaef;
+  background-color: var(--dar-blue);
+  border-color: var(--dar-blue);
 }
 .modal-body .form-check-input:focus {
   box-shadow: unset;
@@ -884,16 +893,16 @@ header .nika-header__contacts-telegram a:hover {
   header .navbar-nav .nav-item .nav-link {
     font-size: 18px;
   }
-  header .nika-header__contacts img {
+  header .dar-header__contacts img {
     height: 22px;
     width: auto;
   }
-  header .nika-header__contacts a {
+  header .dar-header__contacts a {
     font-size: 20px;
   }
-  .nika-top-bar .nika-scroll-anchor a,
-  header .nika-scroll-anchor a,
-  section .nika-scroll-anchor a {
+  .dar-top-bar .dar-scroll-anchor a,
+  header .dar-scroll-anchor a,
+  section .dar-scroll-anchor a {
     font-size: 16px;
     padding: 0 1.25rem;
   }
@@ -901,237 +910,237 @@ header .nika-header__contacts-telegram a:hover {
     font-size: 18px;
     padding: 0.75rem 2rem;
   }
-  .nika-hero .container-fluid {
+  .dar-hero .container-fluid {
     min-height: 700px;
   }
-  .nika-hero .h1,
-  .nika-hero h1 {
+  .dar-hero .h1,
+  .dar-hero h1 {
     font-size: calc(1.40625rem + 1.875vw) !important;
     margin-bottom: 2rem;
   }
 }
 @media (max-width: 1399.98px) and (min-width: 1200px) {
-  .nika-hero .h1,
-  .nika-hero h1 {
+  .dar-hero .h1,
+  .dar-hero h1 {
     font-size: 2.8125rem !important;
   }
 }
 @media (max-width: 1399.98px) {
-  .nika-hero p {
+  .dar-hero p {
     font-size: calc(1.275rem + 0.3vw) !important;
   }
 }
 @media (max-width: 1399.98px) and (min-width: 1200px) {
-  .nika-hero p {
+  .dar-hero p {
     font-size: 1.5rem !important;
   }
 }
 @media (max-width: 1399.98px) {
-  .nika-destinations .h2,
-  .nika-destinations .h3,
-  .nika-destinations .h4,
-  .nika-destinations .h5,
-  .nika-destinations h2,
-  .nika-destinations h3,
-  .nika-destinations h4,
-  .nika-destinations h5,
-  .nika-hot-offers .h2,
-  .nika-hot-offers .h3,
-  .nika-hot-offers .h4,
-  .nika-hot-offers .h5,
-  .nika-hot-offers h2,
-  .nika-hot-offers h3,
-  .nika-hot-offers h4,
-  .nika-hot-offers h5,
-  .nika-services .h2,
-  .nika-services .h3,
-  .nika-services .h4,
-  .nika-services .h5,
-  .nika-services h2,
-  .nika-services h3,
-  .nika-services h4,
-  .nika-services h5,
-  .nika-why-us .h2,
-  .nika-why-us .h3,
-  .nika-why-us .h4,
-  .nika-why-us .h5,
-  .nika-why-us h2,
-  .nika-why-us h3,
-  .nika-why-us h4,
-  .nika-why-us h5,
-  .nika-lead-form .h2,
-  .nika-lead-form .h3,
-  .nika-lead-form .h4,
-  .nika-lead-form .h5,
-  .nika-lead-form h2,
-  .nika-lead-form h3,
-  .nika-lead-form h4,
-  .nika-lead-form h5 {
+  .dar-destinations .h2,
+  .dar-destinations .h3,
+  .dar-destinations .h4,
+  .dar-destinations .h5,
+  .dar-destinations h2,
+  .dar-destinations h3,
+  .dar-destinations h4,
+  .dar-destinations h5,
+  .dar-hot-offers .h2,
+  .dar-hot-offers .h3,
+  .dar-hot-offers .h4,
+  .dar-hot-offers .h5,
+  .dar-hot-offers h2,
+  .dar-hot-offers h3,
+  .dar-hot-offers h4,
+  .dar-hot-offers h5,
+  .dar-services .h2,
+  .dar-services .h3,
+  .dar-services .h4,
+  .dar-services .h5,
+  .dar-services h2,
+  .dar-services h3,
+  .dar-services h4,
+  .dar-services h5,
+  .dar-why-us .h2,
+  .dar-why-us .h3,
+  .dar-why-us .h4,
+  .dar-why-us .h5,
+  .dar-why-us h2,
+  .dar-why-us h3,
+  .dar-why-us h4,
+  .dar-why-us h5,
+  .dar-lead-form .h2,
+  .dar-lead-form .h3,
+  .dar-lead-form .h4,
+  .dar-lead-form .h5,
+  .dar-lead-form h2,
+  .dar-lead-form h3,
+  .dar-lead-form h4,
+  .dar-lead-form h5 {
     font-size: calc(1.34375rem + 1.125vw) !important;
     margin-bottom: 2.5rem;
   }
 }
 @media (max-width: 1399.98px) and (min-width: 1200px) {
-  .nika-destinations .h2,
-  .nika-destinations .h3,
-  .nika-destinations .h4,
-  .nika-destinations .h5,
-  .nika-destinations h2,
-  .nika-destinations h3,
-  .nika-destinations h4,
-  .nika-destinations h5,
-  .nika-hot-offers .h2,
-  .nika-hot-offers .h3,
-  .nika-hot-offers .h4,
-  .nika-hot-offers .h5,
-  .nika-hot-offers h2,
-  .nika-hot-offers h3,
-  .nika-hot-offers h4,
-  .nika-hot-offers h5,
-  .nika-services .h2,
-  .nika-services .h3,
-  .nika-services .h4,
-  .nika-services .h5,
-  .nika-services h2,
-  .nika-services h3,
-  .nika-services h4,
-  .nika-services h5,
-  .nika-why-us .h2,
-  .nika-why-us .h3,
-  .nika-why-us .h4,
-  .nika-why-us .h5,
-  .nika-why-us h2,
-  .nika-why-us h3,
-  .nika-why-us h4,
-  .nika-why-us h5,
-  .nika-lead-form .h2,
-  .nika-lead-form .h3,
-  .nika-lead-form .h4,
-  .nika-lead-form .h5,
-  .nika-lead-form h2,
-  .nika-lead-form h3,
-  .nika-lead-form h4,
-  .nika-lead-form h5 {
+  .dar-destinations .h2,
+  .dar-destinations .h3,
+  .dar-destinations .h4,
+  .dar-destinations .h5,
+  .dar-destinations h2,
+  .dar-destinations h3,
+  .dar-destinations h4,
+  .dar-destinations h5,
+  .dar-hot-offers .h2,
+  .dar-hot-offers .h3,
+  .dar-hot-offers .h4,
+  .dar-hot-offers .h5,
+  .dar-hot-offers h2,
+  .dar-hot-offers h3,
+  .dar-hot-offers h4,
+  .dar-hot-offers h5,
+  .dar-services .h2,
+  .dar-services .h3,
+  .dar-services .h4,
+  .dar-services .h5,
+  .dar-services h2,
+  .dar-services h3,
+  .dar-services h4,
+  .dar-services h5,
+  .dar-why-us .h2,
+  .dar-why-us .h3,
+  .dar-why-us .h4,
+  .dar-why-us .h5,
+  .dar-why-us h2,
+  .dar-why-us h3,
+  .dar-why-us h4,
+  .dar-why-us h5,
+  .dar-lead-form .h2,
+  .dar-lead-form .h3,
+  .dar-lead-form .h4,
+  .dar-lead-form .h5,
+  .dar-lead-form h2,
+  .dar-lead-form h3,
+  .dar-lead-form h4,
+  .dar-lead-form h5 {
     font-size: 2.1875rem !important;
   }
 }
 @media (max-width: 1399.98px) {
-  .nika-lead-form .h5 ~ p,
-  .nika-lead-form h5 ~ p {
+  .dar-lead-form .h5 ~ p,
+  .dar-lead-form h5 ~ p {
     margin-bottom: 2.5rem;
   }
-  .nika-cta-vacation .h3,
-  .nika-cta-vacation h3,
-  .nika-cta-exclusive .h3,
-  .nika-cta-exclusive h3 {
+  .dar-cta-vacation .h3,
+  .dar-cta-vacation h3,
+  .dar-cta-exclusive .h3,
+  .dar-cta-exclusive h3 {
     font-size: calc(1.34375rem + 1.125vw) !important;
   }
 }
 @media (max-width: 1399.98px) and (min-width: 1200px) {
-  .nika-cta-vacation .h3,
-  .nika-cta-vacation h3,
-  .nika-cta-exclusive .h3,
-  .nika-cta-exclusive h3 {
+  .dar-cta-vacation .h3,
+  .dar-cta-vacation h3,
+  .dar-cta-exclusive .h3,
+  .dar-cta-exclusive h3 {
     font-size: 2.1875rem !important;
   }
 }
 @media (max-width: 1399.98px) {
-  .nika-services-showcase .container-fluid {
+  .dar-services-showcase .container-fluid {
     margin-top: 4rem;
   }
-  .nika-services-showcase .h3,
-  .nika-services-showcase h3 {
+  .dar-services-showcase .h3,
+  .dar-services-showcase h3 {
     font-size: calc(1.34375rem + 1.125vw) !important;
     margin-bottom: 2rem;
   }
 }
 @media (max-width: 1399.98px) and (min-width: 1200px) {
-  .nika-services-showcase .h3,
-  .nika-services-showcase h3 {
+  .dar-services-showcase .h3,
+  .dar-services-showcase h3 {
     font-size: 2.1875rem !important;
   }
 }
 @media (max-width: 1399.98px) {
-  .nika-modal__title {
+  .dar-modal__title {
     font-size: 26px;
   }
 }
 @media (max-width: 1199.98px) {
-  .nika-destinations .card picture img {
+  .dar-destinations .card picture img {
     max-height: 230px;
   }
-  .nika-hot-offers .card {
+  .dar-hot-offers .card {
     max-height: 265px;
   }
-  .nika-hot-offers .nika-offer-card--featured .nika-card__footer {
+  .dar-hot-offers .dar-offer-card--featured .dar-card__footer {
     flex-direction: column;
     gap: 0.25rem;
   }
-  .nika-hot-offers .nika-offer-card--featured .nika-card__rating {
+  .dar-hot-offers .dar-offer-card--featured .dar-card__rating {
     order: -1;
   }
-  .nika-cta-vacation .container-fluid,
-  .nika-cta-exclusive .container-fluid,
-  .nika-lead-form .container-fluid {
+  .dar-cta-vacation .container-fluid,
+  .dar-cta-exclusive .container-fluid,
+  .dar-lead-form .container-fluid {
     padding-bottom: 3.5rem;
     padding-top: 3.5rem;
   }
-  .nika-services-showcase .container-fluid,
-  .nika-services .container-fluid,
-  .nika-why-us .container-fluid {
+  .dar-services-showcase .container-fluid,
+  .dar-services .container-fluid,
+  .dar-why-us .container-fluid {
     margin-top: 3.5rem;
   }
-  .nika-services .card {
+  .dar-services .card {
     max-height: 240px;
   }
 }
 @media (max-width: 991.98px) {
-  .nika-hero .container-fluid {
+  .dar-hero .container-fluid {
     min-height: 650px;
   }
-  .nika-cta-vacation .container-fluid,
-  .nika-cta-exclusive .container-fluid {
+  .dar-cta-vacation .container-fluid,
+  .dar-cta-exclusive .container-fluid {
     text-align: center;
   }
-  .nika-cta-vacation .container-fluid > div,
-  .nika-cta-exclusive .container-fluid > div {
+  .dar-cta-vacation .container-fluid > div,
+  .dar-cta-exclusive .container-fluid > div {
     flex-direction: column;
     gap: 2rem;
   }
-  .nika-services-showcase .container-fluid {
+  .dar-services-showcase .container-fluid {
     text-align: center;
   }
-  .nika-services-showcase .nika-showcase-collage {
+  .dar-services-showcase .dar-showcase-collage {
     align-items: center;
     margin-top: 3.5rem;
   }
-  .nika-services-showcase .nika-showcase-collage img:first-child {
+  .dar-services-showcase .dar-showcase-collage img:first-child {
     width: calc(25% - 0.5rem);
   }
-  .nika-services-showcase .nika-showcase-collage img:nth-child(2) {
+  .dar-services-showcase .dar-showcase-collage img:nth-child(2) {
     width: calc(30% - 0.5rem);
   }
-  .nika-services-showcase .nika-showcase-collage img:nth-child(3) {
+  .dar-services-showcase .dar-showcase-collage img:nth-child(3) {
     align-self: unset;
     margin: 0 0 0 1rem;
     width: calc(25% - 0.5rem);
   }
-  .nika-services-showcase .nika-showcase-collage img:last-child {
+  .dar-services-showcase .dar-showcase-collage img:last-child {
     display: none;
   }
-  .nika-services-showcase .list-group {
+  .dar-services-showcase .list-group {
     flex-direction: row;
     justify-content: space-around;
   }
-  .nika-services-showcase .list-group-item {
+  .dar-services-showcase .list-group-item {
     flex-direction: column;
     gap: 1rem;
     width: 25%;
   }
-  .nika-services-showcase .list-group-item:nth-child(2) {
+  .dar-services-showcase .list-group-item:nth-child(2) {
     order: -1;
   }
-  .nika-services .card {
+  .dar-services .card {
     max-height: 200px;
   }
 }
@@ -1153,141 +1162,141 @@ header .nika-header__contacts-telegram a:hover {
   header.header-fixed .navbar-brand img {
     height: 60px;
   }
-  .nika-top-bar .nika-scroll-anchor,
-  header .nika-scroll-anchor,
-  section .nika-scroll-anchor {
+  .dar-top-bar .dar-scroll-anchor,
+  header .dar-scroll-anchor,
+  section .dar-scroll-anchor {
     display: none;
   }
-  .nika-top-bar .nika-scroll-anchor a,
-  header .nika-scroll-anchor a,
-  section .nika-scroll-anchor a {
+  .dar-top-bar .dar-scroll-anchor a,
+  header .dar-scroll-anchor a,
+  section .dar-scroll-anchor a {
     padding: 0 1rem;
   }
-  .nika-top-bar .container-fluid,
+  .dar-top-bar .container-fluid,
   header .container-fluid,
   section .container-fluid {
     padding: 0 1.5rem;
   }
-  .nika-hero .container-fluid {
+  .dar-hero .container-fluid {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  .nika-hero .h1 br,
-  .nika-hero h1 br,
-  .nika-hero p br {
+  .dar-hero .h1 br,
+  .dar-hero h1 br,
+  .dar-hero p br {
     display: none;
   }
-  .nika-destinations .h2,
-  .nika-destinations .h3,
-  .nika-destinations .h4,
-  .nika-destinations h2,
-  .nika-destinations h3,
-  .nika-destinations h4,
-  .nika-hot-offers .h2,
-  .nika-hot-offers .h3,
-  .nika-hot-offers .h4,
-  .nika-hot-offers h2,
-  .nika-hot-offers h3,
-  .nika-hot-offers h4,
-  .nika-services-showcase .h2,
-  .nika-services-showcase .h3,
-  .nika-services-showcase .h4,
-  .nika-services-showcase h2,
-  .nika-services-showcase h3,
-  .nika-services-showcase h4,
-  .nika-services .h2,
-  .nika-services .h3,
-  .nika-services .h4,
-  .nika-services h2,
-  .nika-services h3,
-  .nika-services h4,
-  .nika-why-us .h2,
-  .nika-why-us .h3,
-  .nika-why-us .h4,
-  .nika-why-us h2,
-  .nika-why-us h3,
-  .nika-why-us h4 {
+  .dar-destinations .h2,
+  .dar-destinations .h3,
+  .dar-destinations .h4,
+  .dar-destinations h2,
+  .dar-destinations h3,
+  .dar-destinations h4,
+  .dar-hot-offers .h2,
+  .dar-hot-offers .h3,
+  .dar-hot-offers .h4,
+  .dar-hot-offers h2,
+  .dar-hot-offers h3,
+  .dar-hot-offers h4,
+  .dar-services-showcase .h2,
+  .dar-services-showcase .h3,
+  .dar-services-showcase .h4,
+  .dar-services-showcase h2,
+  .dar-services-showcase h3,
+  .dar-services-showcase h4,
+  .dar-services .h2,
+  .dar-services .h3,
+  .dar-services .h4,
+  .dar-services h2,
+  .dar-services h3,
+  .dar-services h4,
+  .dar-why-us .h2,
+  .dar-why-us .h3,
+  .dar-why-us .h4,
+  .dar-why-us h2,
+  .dar-why-us h3,
+  .dar-why-us h4 {
     margin-bottom: 2rem;
   }
-  .nika-destinations .card picture img {
+  .dar-destinations .card picture img {
     max-height: 200px;
   }
-  .nika-destinations .nika-card__price {
+  .dar-destinations .dar-card__price {
     left: 1rem;
     right: unset;
     top: 1rem;
   }
-  .nika-hot-offers .container-fluid {
+  .dar-hot-offers .container-fluid {
     margin-top: 2rem;
   }
-  .nika-hot-offers .h2,
-  .nika-hot-offers h2 {
+  .dar-hot-offers .h2,
+  .dar-hot-offers h2 {
     text-align: center;
   }
-  .nika-hot-offers .card {
+  .dar-hot-offers .card {
     max-height: 245px;
   }
-  .nika-hot-offers .nika-card__meta-days img,
-  .nika-hot-offers .nika-card__meta-guests img {
+  .dar-hot-offers .dar-card__meta-days img,
+  .dar-hot-offers .dar-card__meta-guests img {
     display: none;
   }
-  .nika-cta-vacation .nika-section-inner,
-  .nika-cta-exclusive .nika-section-inner {
+  .dar-cta-vacation .dar-section-inner,
+  .dar-cta-exclusive .dar-section-inner {
     border-radius: unset;
   }
-  .nika-cta-vacation .container-fluid,
-  .nika-cta-exclusive .container-fluid,
-  .nika-lead-form .container-fluid {
+  .dar-cta-vacation .container-fluid,
+  .dar-cta-exclusive .container-fluid,
+  .dar-lead-form .container-fluid {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  .nika-services-showcase .nika-showcase-collage {
+  .dar-services-showcase .dar-showcase-collage {
     align-items: flex-end;
     margin: 3rem auto 0 auto;
     max-width: 460px;
   }
-  .nika-services-showcase .nika-showcase-collage img:first-child {
+  .dar-services-showcase .dar-showcase-collage img:first-child {
     width: calc(45% - 0.5rem);
   }
-  .nika-services-showcase .nika-showcase-collage img:nth-child(2) {
+  .dar-services-showcase .dar-showcase-collage img:nth-child(2) {
     width: calc(55% - 0.5rem);
   }
-  .nika-services-showcase .nika-showcase-collage img:nth-child(3) {
+  .dar-services-showcase .dar-showcase-collage img:nth-child(3) {
     align-self: flex-start;
     margin: 1rem 1rem 0 0;
     width: 32.5%;
   }
-  .nika-services-showcase .nika-showcase-collage img:last-child {
+  .dar-services-showcase .dar-showcase-collage img:last-child {
     display: block;
   }
-  .nika-services-showcase .list-group {
+  .dar-services-showcase .list-group {
     flex-direction: column;
   }
-  .nika-services-showcase .list-group-item {
+  .dar-services-showcase .list-group-item {
     width: 100%;
   }
-  .nika-services .h4,
-  .nika-services h4 {
+  .dar-services .h4,
+  .dar-services h4 {
     text-align: center;
   }
-  .nika-services .card {
+  .dar-services .card {
     max-height: 180px;
   }
-  .nika-lead-form .nika-section-inner::before {
+  .dar-lead-form .dar-section-inner::before {
     display: none;
   }
-  .nika-lead-form .nika-section-inner::after {
+  .dar-lead-form .dar-section-inner::after {
     background-position: center;
     height: 50%;
     top: auto;
     width: 100%;
   }
-  .nika-location iframe {
+  .dar-location iframe {
     border-radius: unset;
   }
 }
 @media (max-width: 575.98px) {
-  .nika-top-bar .container-fluid,
+  .dar-top-bar .container-fluid,
   header .container-fluid,
   section .container-fluid {
     padding: 0 0.75rem;
@@ -1299,58 +1308,58 @@ header .nika-header__contacts-telegram a:hover {
     height: 77px;
     width: auto;
   }
-  .nika-top-bar {
+  .dar-top-bar {
     position: fixed;
     bottom: 0;
     background-color: #fff;
     width: 100%;
     z-index: 999;
   }
-  .nika-top-bar .nika-social {
+  .dar-top-bar .dar-social {
     gap: 10px;
   }
-  .nika-top-bar .nika-lang-switch {
+  .dar-top-bar .dar-lang-switch {
     margin-right: 24px;
   }
-  .nika-top-bar .nika-offers-banner {
+  .dar-top-bar .dar-offers-banner {
     display: none;
   }
-  .nika-destinations .card {
+  .dar-destinations .card {
     flex-direction: row;
     min-height: 200px;
   }
-  .nika-destinations .card picture {
+  .dar-destinations .card picture {
     flex-shrink: 0;
     width: 45%;
   }
-  .nika-destinations .card picture img {
+  .dar-destinations .card picture img {
     height: 100%;
     max-height: 100%;
   }
-  .nika-hot-offers .container-fluid {
+  .dar-hot-offers .container-fluid {
     margin-top: 2.5rem;
   }
-  .nika-services-showcase .h3,
-  .nika-services-showcase h3 {
+  .dar-services-showcase .h3,
+  .dar-services-showcase h3 {
     text-align: center;
   }
-  .nika-services-showcase .list-group-item {
+  .dar-services-showcase .list-group-item {
     flex-direction: row;
     padding: 10px 0;
   }
-  .nika-services .card {
+  .dar-services .card {
     max-height: 160px;
   }
-  .nika-lead-form .nika-section-inner::after {
+  .dar-lead-form .dar-section-inner::after {
     background: 0 0;
   }
-  .nika-lead-form .btn {
+  .dar-lead-form .btn {
     max-width: 260px;
     min-width: auto;
     width: 75%;
   }
 }
 /* Spacer when the main lead form is removed */
-.nika-lead-form__placeholder {
+.dar-lead-form__placeholder {
   min-height: min(60vh, 520px);
 }
