@@ -42,6 +42,28 @@
   --dar-teal-soft: #5a7979;
   --dar-blue: #1c89b8;
   --dar-text-on-gold: #1a2e2e;
+  /* Gold tint for inline SVG <img> icons (aligned with --dar-gold) */
+  --dar-icon-gold-filter: brightness(0) saturate(100%) invert(75%) sepia(40%) saturate(600%)
+    hue-rotate(5deg);
+  /* Vertical nav strip: low contrast vs page bg, smooth left→right fade */
+  --dar-scroll-anchor-gradient: linear-gradient(
+    to right,
+    color-mix(in srgb, var(--dar-cream) 14%, #ffffff 86%),
+    color-mix(in srgb, var(--dar-cream) 9%, #ffffff 91%),
+    color-mix(in srgb, var(--dar-cream) 6%, #ffffff 94%)
+  );
+}
+html,
+body {
+  background-color: color-mix(in srgb, var(--dar-cream) 4%, #ffffff 10%);
+}
+.dar-services-showcase .list-group-item img,
+.dar-why-us .card img,
+.dar-card__cta img,
+header .dar-header__contacts img,
+.dar-hot-offers .dar-card__meta-days img,
+.dar-hot-offers .dar-card__meta-guests img {
+  filter: var(--dar-icon-gold-filter);
 }
 i[class^="icon-"] {
   color: #000;
@@ -93,8 +115,8 @@ section {
 .dar-top-bar .dar-scroll-anchor,
 header .dar-scroll-anchor,
 section .dar-scroll-anchor {
-  background-color: #fff;
-  border-right: 1px solid rgba(71, 115, 115, 0.18);
+  background: var(--dar-scroll-anchor-gradient);
+  border-right: 1px solid color-mix(in srgb, var(--dar-teal) 12%, transparent);
   display: flex;
   justify-content: center;
   position: relative;
@@ -115,6 +137,10 @@ header .container-fluid,
 section .container-fluid {
   max-width: 1308px;
   padding: 0 3rem;
+}
+.dar-top-bar .container-fluid {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .row {
   --bs-gutter-x: 1rem;
@@ -180,7 +206,17 @@ section .container-fluid {
   }
 }
 .dar-top-bar {
-  padding: 10px 0;
+  align-items: stretch;
+  padding: 0;
+}
+.dar-top-bar .dar-scroll-anchor {
+  align-items: stretch;
+  align-self: stretch;
+}
+.dar-top-bar .dar-scroll-anchor a {
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
 }
 .dar-top-bar .dar-channel-buttons,
 .dar-top-bar .dar-social {
@@ -297,11 +333,19 @@ header.header-fixed .dar-header__contacts > div:nth-child(2) {
 header.header-fixed .dar-header__contacts a {
   color: var(--dar-blue);
 }
+header.header-fixed .dar-header__contacts a[href^="tel:"] {
+  color: var(--dar-gold);
+}
+header.header-fixed .dar-header__contacts a[href^="tel:"]:hover {
+  color: var(--dar-gold-deep);
+}
 header.header-fixed .dar-header__contacts-telegram {
   display: none;
 }
 header .dar-scroll-anchor {
-  border: unset;
+  border-bottom: unset;
+  border-left: unset;
+  border-top: unset;
 }
 header .navbar-nav .nav-item .nav-link {
   color: #fff;
@@ -315,6 +359,12 @@ header .dar-header__contacts a {
   font-size: 22px;
   font-weight: 600;
   text-decoration: none;
+}
+header .dar-header__contacts a[href^="tel:"] {
+  color: var(--dar-gold);
+}
+header .dar-header__contacts a[href^="tel:"]:hover {
+  color: var(--dar-gold-deep);
 }
 header .dar-header__contacts a:hover {
   color: var(--dar-blue);
@@ -412,7 +462,7 @@ header .dar-header__contacts-telegram a:hover {
 }
 .dar-destinations .h2::first-letter,
 .dar-destinations h2::first-letter {
-  color: var(--dar-blue);
+  color: var(--dar-gold);
 }
 .dar-destinations .card {
   border: unset;
@@ -473,7 +523,7 @@ header .dar-header__contacts-telegram a:hover {
 }
 .dar-hot-offers .h2::first-letter,
 .dar-hot-offers h2::first-letter {
-  color: var(--dar-blue);
+  color: var(--dar-gold);
 }
 .dar-hot-offers .card {
   border: unset;
@@ -579,6 +629,12 @@ header .dar-header__contacts-telegram a:hover {
   font-size: 40px;
   text-transform: uppercase;
 }
+.dar-cta-vacation .h3::first-letter,
+.dar-cta-vacation h3::first-letter,
+.dar-cta-exclusive .h3::first-letter,
+.dar-cta-exclusive h3::first-letter {
+  color: var(--dar-gold);
+}
 .dar-cta-vacation p,
 .dar-cta-exclusive p {
   color: #fff;
@@ -620,7 +676,7 @@ header .dar-header__contacts-telegram a:hover {
 }
 .dar-services-showcase .h3::first-letter,
 .dar-services-showcase h3::first-letter {
-  color: var(--dar-blue);
+  color: var(--dar-gold);
 }
 .dar-services-showcase p {
   color: var(--dar-teal-soft);
@@ -648,7 +704,7 @@ header .dar-header__contacts-telegram a:hover {
 }
 .dar-services .h4::first-letter,
 .dar-services h4::first-letter {
-  color: var(--dar-blue);
+  color: var(--dar-gold);
 }
 .dar-services .card {
   border: unset;
@@ -709,7 +765,7 @@ header .dar-header__contacts-telegram a:hover {
 }
 .dar-why-us .h4::first-letter,
 .dar-why-us h4::first-letter {
-  color: var(--dar-blue);
+  color: var(--dar-gold);
 }
 .dar-why-us .card {
   align-items: center;
@@ -758,7 +814,7 @@ header .dar-header__contacts-telegram a:hover {
 }
 .dar-lead-form .h5::first-letter,
 .dar-lead-form h5::first-letter {
-  color: var(--dar-blue);
+  color: var(--dar-gold);
 }
 .dar-lead-form .h5 ~ p,
 .dar-lead-form h5 ~ p {
@@ -821,6 +877,9 @@ header .dar-header__contacts-telegram a:hover {
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
+}
+.dar-modal__title::first-letter {
+  color: var(--dar-gold);
 }
 .dar-modal__text {
   font-size: 16px;
@@ -1172,7 +1231,9 @@ header .dar-header__contacts-telegram a:hover {
   section .dar-scroll-anchor a {
     padding: 0 1rem;
   }
-  .dar-top-bar .container-fluid,
+  .dar-top-bar .container-fluid {
+    padding: 10px 1.5rem;
+  }
   header .container-fluid,
   section .container-fluid {
     padding: 0 1.5rem;
@@ -1296,7 +1357,9 @@ header .dar-header__contacts-telegram a:hover {
   }
 }
 @media (max-width: 575.98px) {
-  .dar-top-bar .container-fluid,
+  .dar-top-bar .container-fluid {
+    padding: 10px 0.75rem;
+  }
   header .container-fluid,
   section .container-fluid {
     padding: 0 0.75rem;
