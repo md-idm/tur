@@ -115,11 +115,14 @@ section {
 .dar-top-bar .dar-scroll-anchor,
 header .dar-scroll-anchor,
 section .dar-scroll-anchor {
+  align-self: stretch;
   background: var(--dar-scroll-anchor-gradient);
   border-right: 1px solid color-mix(in srgb, var(--dar-teal) 12%, transparent);
   display: flex;
+  flex: 0 0 auto;
   justify-content: center;
   position: relative;
+  width: fit-content;
   z-index: 2;
 }
 .dar-top-bar .dar-scroll-anchor a,
@@ -137,6 +140,45 @@ header .container-fluid,
 section .container-fluid {
   max-width: 1308px;
   padding: 0 3rem;
+}
+.section-module .container-fluid {
+  margin: -78px auto 0;
+}
+section.section-module #tours_search_frame {
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+@media (min-width: 992px) {
+  /* static: без offset; «как top:0 left:0» — прижатие к началу ряда через align-items на section + align-self */
+  #section-module{
+    position: relative;
+  }   
+  #section-module .dar-scroll-anchor {
+    left: 0;
+    top:0;
+    height: 270px;
+    position: absolute;
+  }
+  section.section-module #tours_search_frame {
+    height: 270px !important;
+    margin-bottom: -100px;
+    min-height: 0;
+  }
+  .section-module + .dar-destinations {
+    padding-top: clamp(3.25rem, 9vw, 5.5rem);
+    position: relative;
+    z-index: 1;
+  }
+  .section-module + .dar-destinations .container-fluid {
+    margin-top: 0;
+  }
+}
+@media (max-width: 991.98px) {
+  section.section-module #tours_search_frame {
+    height: auto !important;
+    margin-bottom: 0;
+  }
 }
 .dar-top-bar .container-fluid {
   padding-top: 10px;
@@ -1238,6 +1280,11 @@ header .dar-header__contacts-telegram a:hover {
   section .container-fluid {
     padding: 0 1.5rem;
   }
+  #section-module .container-fluid {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    width: calc(100% + 3rem);
+  }
   .dar-hero .container-fluid {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -1364,6 +1411,11 @@ header .dar-header__contacts-telegram a:hover {
   section .container-fluid {
     padding: 0 0.75rem;
   }
+  #section-module .container-fluid {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    width: calc(100% + 1.5rem);
+  }
   header {
     top: 0;
   }
@@ -1423,6 +1475,11 @@ header .dar-header__contacts-telegram a:hover {
   }
 }
 /* Spacer when the main lead form is removed */
-.dar-lead-form__placeholder {
-  min-height: min(60vh, 520px);
+.dar-lead-form {
+  min-height: 800px;
+}
+@media (max-width: 520px) {
+  .dar-lead-form {
+    min-height: 820px;
+  }
 }

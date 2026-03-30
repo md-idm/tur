@@ -55,6 +55,74 @@
 </script>    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/custom.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.startur.md/js/underscore-min.js"></script>
+    <script src="https://cdn.startur.md/js/jquery.modal.min.js"></script>
+    <script src="https://cdn.startur.md/js/startur.js?v=4"></script>
+    <script type="text/javascript">
+            function frameEvent(event) {
+
+                if (event.data.search('autoscroll') >= 0) {
+                    try {
+                        jQuery('body').scrollTo('#tours_search_frame', 1000);
+                    } catch (err) {
+                        console.log(err)
+                    }
+                }
+
+
+                if (event.data.search('set_frame_height') >= 0 && jQuery('html body').width() >= 991) {
+                    var height = parseInt(event.data.split(':')[1]);
+
+                    try {
+                        var frame = document.getElementById('tours_search_frame')
+
+                        console.log("height - ", height)
+
+                        if (height === 0) {
+                            jQuery(frame).css("height", '');
+                        } else {
+                            frame.style.height = height + 'px'
+                        }
+                    } catch (err) {
+                        console.log(err)
+                    }
+                }
+
+            }
+            window.addEventListener("message", frameEvent, false);
+
+            function debugAllPostMessages(event) {
+                var d = event.data;
+                var preview;
+                if (typeof d === "string") {
+                    preview = d;
+                } else if (d && typeof d === "object") {
+                    try {
+                        preview = JSON.stringify(d);
+                    } catch (e) {
+                        preview = String(d);
+                    }
+                } else {
+                    preview = String(d);
+                }
+                console.log("[postMessage DEBUG] origin:", event.origin, "| typeof:", typeof d, "| data:", preview);
+                var logEl = document.getElementById("test_postmessage_log");
+                if (logEl) {
+                    logEl.textContent += "[" + new Date().toISOString() + "] " + event.origin + " | " + typeof d + " | " + preview + "\n";
+                }
+            }
+            window.addEventListener("message", debugAllPostMessages, false);
+
+            jQuery(document).ready(function () {
+                var promo = new PromoPrice();
+                promo.domain = 'proxy.travel';
+                promo.token = 'GCuTfVhhNfKkzndo8IiBTApKHz5yJO';
+                promo.price_server = 'proxy.travel';
+                promo.protocol = "https";
+                promo.run();
+            });
+    </script>
 </head>
 <body>
 <script>
@@ -149,6 +217,14 @@
                 </div>
             </div>
         </section>
+        <section class="section-module" id="section-module">
+            <div class="dar-scroll-anchor">
+                <a class="dar-nav-anchor" href="#destinations">&nbsp;</a>
+            </div>
+            <div class="container-fluid">
+                <iframe allowtransparency="true" frameborder="0" id="tours_search_frame" scrolling="yes" src="https://proxy.travel/book/package_search_remote/index/6GozdO8tEiJ0VeC91mgQg8ikRGnaGf/ro" style="display: block" width="100%"></iframe>
+            </div>
+        </section>
         <section class="dar-destinations" id="destinations">
             <div class="dar-scroll-anchor">
                 <a class="dar-nav-anchor" href="#hot-offers">Oferte fierbinți</a>
@@ -158,6 +234,7 @@
                     <div class="col-12">
                         <h2>Cele mai populare destinații</h2>
                     </div>
+                    <div class="block_promo_prices" category_id="34" limit="9"></div>
                     <div class="col-sm-6 col-lg-4 mb-3 mb-sm-4 mb-md-5">
                         <figure class="card invisible" itemprop="makesOffer" itemscope itemtype="https://schema.org/Offer">
                             <picture>
@@ -709,7 +786,7 @@
                             <p>Pentru a primi oferta potrivită, Va rugăm să lăsați un <strong>NUMĂR de CONTACT</strong> și să indicați următoarele detalii:</p>
                         </div>
                         <div class="col-12">
-                            <div class="dar-lead-form__placeholder" aria-hidden="true"></div>
+                            <iframe class="dar-lead-form" allowtransparency="true" frameborder="0" id="lead_form_frame" scrolling="yes" src="https://proxy.travel/book/leads/leadform2/6GozdO8tEiJ0VeC91mgQg8ikRGnaGf/ro" style="display: block" width="100%"></iframe>
                         </div>
                     </div>
                 </div>
@@ -732,6 +809,18 @@
                 </div>
             </div>
         </section>
+        <!-- <section class="section-module dar-postmessage-test" id="postmessage-test">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="mb-3">Test postMessage (iframe → pagina principală)</h5>
+                        <p class="small text-muted mb-2">Mod DEBUG: se înregistrează <strong>toate</strong> <code>postMessage</code> (widget tur, iframe test, altele). La fiecare 15 s iframe-ul de test trimite <code>test-ping:&lt;ISO&gt;</code>. Jurnal + consolă (top):</p>
+                        <pre id="test_postmessage_log" class="p-3 rounded mb-3" style="background:#f6f8fa;font-size:13px;white-space:pre-wrap;word-break:break-all;max-height:200px;overflow:auto;"></pre>
+                        <iframe id="test_postmessage_frame" class="w-100" src="test-postmessage-frame.html" title="Test postMessage" style="height:220px;border:2px solid #1c89b8;border-radius:8px;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section> -->
     </main>
     <div class="modal fade" id="popup" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -786,7 +875,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <script src="assets/js/app.js"></script>
     </body>
 </html>

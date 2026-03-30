@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тест postMessage (iframe → родитель)</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 24px auto; padding: 0 16px; }
+    h1 { font-size: 1.25rem; }
+    p { color: #444; }
+    iframe {
+      width: 100%;
+      height: 280px;
+      border: 2px solid #1c89b8;
+      border-radius: 8px;
+      display: block;
+      margin-top: 16px;
+    }
+    #parent-log {
+      background: #f6f8fa;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Тест: из iframe в родителя — <code>postMessage</code> каждые 15 с</h1>
+  <p>Строка в сообщении: <code>test-ping:&lt;ISO-время&gt;</code>. Ниже — лог <strong>родителя</strong> (приём). Контекст консоли: <strong>top</strong>.</p>
+  <p><strong>Лог родителя</strong> (входящие):</p>
+  <pre id="parent-log"></pre>
+
+  <iframe id="testFrame" src="test-postmessage-frame.html" title="Тестовый iframe"></iframe>
+
+  <script>
+    (function () {
+      var parentLog = document.getElementById('parent-log');
+
+      function parentAppend(line) {
+        console.log('[parent]', line);
+        parentLog.textContent += line + '\n';
+      }
+
+      window.addEventListener('message', function (e) {
+        var now = new Date().toISOString();
+        parentAppend(
+          '[' + now + '] data: ' + JSON.stringify(e.data) +
+          ' | origin: ' + e.origin
+        );
+      });
+
+      parentAppend('Слушатель на родителе установлен. Жду сообщения из iframe…');
+    })();
+  </script>
+</body>
+</html>
