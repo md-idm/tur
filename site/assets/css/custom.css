@@ -1483,3 +1483,12 @@ header .dar-header__contacts-telegram a:hover {
     min-height: 820px;
   }
 }
+
+.dar-lead-form .ru {
+  min-height: 820px;
+}
+@media (max-width: 520px) {
+  .dar-lead-form .ru {
+    min-height: 840px;
+  }
+}
