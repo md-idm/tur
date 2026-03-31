@@ -1,0 +1,706 @@
+.promo_price_item {
+    margin: 15px 12px;
+    width: 31%;
+    -webkit-box-shadow: 0 2px 5px 0 #00000029,0 2px 10px 0 #0000001f !important;
+    box-shadow: 0 2px 5px 0 #00000029,0 2px 10px 0 #0000001f !important;
+    transition: 0.3s ease-out;
+    border-radius: 30px;
+}
+
+.promo_price_item:hover {
+    /* margin-top: -15px; */
+    -webkit-box-shadow: 0 10px 30px #1818184d;
+    box-shadow: 0 10px 30px #1818184d;
+}
+
+.block_promo_prices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.promo_info_1 {
+    position: absolute;
+    margin-left: -6px;
+    margin-top: -99px;
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    font-size: 24px;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #111;
+    color: #00DA53;
+}
+
+.promo_info_2 {
+    position: absolute;
+    margin-left: 91px;
+    margin-top: -23px;
+    font-size: 16px;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #111;
+    color: #FF4949;
+}
+
+.promo_info_3 {
+    position: absolute;
+    margin-left: 100px;
+    margin-top: -146px;
+    font-size: 29px;
+    font-weight: 700;
+    text-shadow: 0px 1px 1px #111;
+    color: #4FF8FF;
+}
+
+.promo_item_desc_hotel_name {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 700;
+    height: 40px;
+    overflow: hidden;
+    background: #FFCC00;
+    padding: 5px 5px;
+    color: #176EA7;
+    border-right: 1px solid #DAA300;
+    border-left: 1px solid #DAA300;
+    border-bottom: 1px solid #DAA300;
+}
+
+.promo_hotel_icon:hover {
+    z-index:2;
+    -moz-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    transition: all .2s ease-in-out;
+}
+
+.promo_item_hotel_photo {
+    width: 100%;
+    height: 470px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background-position: 50%;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+.modal a.close-modal {
+    top: 0px;
+    right: 0px;
+}
+
+.promo_item_sum {
+    height: 40px;
+    line-height: 50px;
+    position: inherit;
+    top: 12px;
+    left: 7px;
+    padding: 0px 20px 13px 22px;
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: -41px;
+}
+
+.promo_item_sum_intern {
+    background: #8dc645;
+    width: 126px;
+    position: absolute;
+    margin-left: -22px;
+    height: 62px;
+    margin-top: 5px;
+}
+
+.promo_item_sum_intern em {
+    padding-left: 17px;
+    font-style: normal;
+    font-weight: 700;
+    text-shadow: 0 1px 3px #18181833;
+    color: #FFF;
+}
+
+.promo_item_spo_intern {
+    background: #00c4e0;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    width: 150px;
+    position: absolute;
+    font-weight: 800;
+    margin-left: 0;
+    height: 28px;
+    line-height: 28px;
+    margin-top: 60px;
+    z-index: 2;
+    background-size: contain;
+    text-shadow: 0 1px 3px #18181833;
+}
+
+.promo_item_spo {
+    height: 40px;
+    line-height: 38px;
+    position: inherit;
+    top: 15px;
+    left: 5px;
+    padding: 15px 18px 13px 22px;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: -40px;
+    float: right;
+}
+
+.promo_item_sum_intern_font {
+    font-size: 18px;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+.promo_item_date_and_nights {
+    background: url('http://vnp.online/assets/teztour/date-and-nights-tag.png') no-repeat left center;
+    position: absolute;
+    margin-left: -25px;
+    margin-top: 102px;
+    vertical-align: middle;
+    height: 48px;
+    line-height: 15px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #111;
+    font-size: 15px;
+    font-style: normal;
+    color: #fff;
+    font-weight: 700;
+    width: 132px;
+    -webkit-transform: rotate(-21deg);
+    -moz-transform: rotate(-21deg);
+    -ms-transform: rotate(-21deg);
+    -o-transform: rotate(-21deg);
+}
+
+.promo_item_date_and_nights2 {
+    margin-top: 17px;
+    position: absolute;
+    width: 120px;
+    margin-left: -65px;
+}
+
+.promo_item_sum_per_person {
+    display: none;
+}
+
+.resort_only {
+    display: none;
+}
+
+.promo_state2 {
+    display: none;
+}
+
+.no_photo_class {
+    height: 470px;
+    background-repeat: no-repeat;
+    background-image: url("../img/no_photo_b2c.jpg");
+    position: relative;
+}
+
+.package_wp .description-wrapper {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 279px;
+    padding-top: 94px;
+    -webkit-transition: top .5s ease-out .1s;
+    -moz-transition: top .5s ease-out .1s;
+    -o-transition: top .5s ease-out .1s;
+    transition: top .5s ease-out .1s;
+    background: linear-gradient(to bottom,  #00000000 0%,#000000a6 43%,#000000 100%);
+    font-family: 'Montserrat';
+    color: #fff;
+}
+
+.package_promo .description-wrapper {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 304px;
+    padding-top: 72px;
+    -webkit-transition: top .5s ease-out .1s;
+    -moz-transition: top .5s ease-out .1s;
+    -o-transition: top .5s ease-out .1s;
+    transition: top .5s ease-out .1s;
+    background: linear-gradient(to bottom,  #00000000 0%,#00000080 43%,#000000 100%);
+    font-family: 'Montserrat';
+}
+
+.promo_price_item.package_wp:hover .description-wrapper {
+    top: 0px;
+    color: #fff;
+}
+
+.promo_price_item.package_promo:hover .description-wrapper {
+    top: 229px;
+}
+
+.description-wrapper .description-prop-date {
+    float: left;
+    border-top: 2px solid #fff;
+    line-height: 32px;
+    margin-left: 15px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+}
+
+.description-wrapper .description-prop-date i {
+    margin-right: 3px;
+    color: #FFD23E;
+}
+
+.description-wrapper .description-prop-nights i {
+    margin-right: 3px;
+}
+
+.description-wrapper .description-prop-food i {
+    margin-right: 5px;
+}
+
+.description-wrapper .description-prop-room i {
+    margin-right: 3px;
+}
+
+.description-wrapper .description-prop-placement i {
+    margin-right: 3px;
+}
+
+.description-prop-price {
+    position: absolute;
+    background: #FFD23E;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 6px 25px;
+    top: 20px;
+    left: 0px;
+    color: #fff;
+    font-family: Montserrat;
+    text-shadow: 0 1px 3px #18181833;
+    z-index: 1;
+}
+
+.ppdesc {
+    font-size: 16px;
+    display: block;
+    line-height: 120%;
+    margin-bottom: 3px;
+}
+
+.package_wp .description-wrapper .description-prop-nights {
+    clear: both;
+    line-height: 32px;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 15px;
+    text-align: left;
+}
+
+.package_promo .description-wrapper .description-prop-nights {
+    clear: both;
+    line-height: 22px;
+    margin-left: 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.package_wp .description-wrapper .description-prop-food {
+    clear: both;
+    line-height: 32px;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 15px;
+    text-align: left;
+}
+
+.package_promo .description-wrapper .description-prop-food {
+    clear: both;
+    line-height: 22px;
+    margin-left: 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.description-wrapper .description-prop-food p {
+    line-height: 22px;
+}
+
+.package_promo .description-wrapper .description-prop-room {
+    clear: both;
+    line-height: 22px;
+    margin-left: 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.package_wp .description-wrapper .description-prop-room {
+    clear: both;
+    line-height: 32px;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 15px;
+    text-align: left;
+}
+
+.package_wp .description-wrapper .description-prop-placement {
+    clear: both;
+    line-height: 32px;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 15px;
+    text-align: left;
+    float: right;
+    margin-top: -44px;
+    display: none;
+}
+
+.description-wrapper .description-prop-placement {
+    clear: both;
+    line-height: 32px;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 15px;
+    text-align: left;
+    float: right;
+    margin-top: -44px;
+}
+
+.block_promo_prices a {
+    color: #fff!important;
+    text-decoration: none;
+    text-shadow: 0 1px 3px #18181833;
+}
+
+.description-prop-hotel {
+    font-size: 15px;
+    font-weight: 400;
+    height: 22px;
+    color: #ffffff;
+    padding-left: 15px;
+    /* margin-top: 8px; */
+    text-align: left;
+    line-height: 14px;
+    width: 74%;
+    font-family: 'Montserrat';
+}
+
+/* .promo_price_item:hover .description-prop-hotel { */
+    /* margin-top: 60px; */
+/* } */
+
+.description-prop-hotel2 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 150%;
+    height: 35px;
+    padding: 6px 0 0 15px;
+    text-align: left;
+    width: 100%;
+    font-family: Montserrat;
+    background: #ffffff00;
+    /* text-align: center; */
+}
+
+.description-prop-category {
+    padding-left: 10px;
+    height: 20px;
+    display: none;
+}
+
+.description-prop-category_full {
+    padding-left:10px;
+    height: 20px;
+    display: none;
+}
+
+.description-prop-hotel2_full {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    height: 35px;
+    padding: 6px 0 0 15px;
+    text-align: left;
+    width: 100%;
+    font-family: Montserrat;
+    display: none;
+    background: #ffffff00;
+    /* text-align: center; */
+}
+
+.promo_price_item:hover .description-prop-hotel2 {
+    display: none;
+}
+
+.promo_price_item:hover .description-prop-category {
+    display: none;
+}
+
+.promo_price_item:hover .description-prop-hotel2_full {
+    display: block;
+    line-height: 150%;
+}
+
+.promo_price_item:hover .description-prop-category_full {
+    display: none;
+}
+
+.description-prop-price-per-person {
+    position: absolute;
+    margin: -14px 20px 20px 240px;
+    font-size: 14px;
+    width: 98px;
+    height: 0px;
+    color: #555;
+}
+
+.tour_info_title_h {
+    font-size: 18px;
+    margin-bottom: 0!important;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    padding-bottom: 4px;
+    color: #eee
+}
+
+.description-prop-description {
+    margin-top: 40px;
+    padding: 0 15px;
+}
+
+.tour_info_description i.fa-check {
+    color: #FFD23E;
+    margin-right: 3px;
+}
+
+.tour_info_description {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tour_info_description > div {
+    padding-right: 2px;
+    padding-bottom: 4px;
+    font-family: 'Montserrat';
+    width: 50%;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.tour_info_accommodation .hot_description_title {
+    font-family: 'Montserrat';
+    margin-bottom: 3px;
+    font-size: 15px;
+    margin-top: 5px;
+    font-weight: 600;
+    padding-bottom: 2px;
+}
+
+.tour_info_other_services {
+    font-size: 13px;
+}
+
+.tour_info_other_services .hot_description_title {
+    margin-bottom: 3px;
+    font-size: 15px;
+    margin-top: 5px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.tour_info_transport .tour_info_title {
+    font-weight: 600;
+    margin-bottom: 3px;
+    font-size: 15px;
+    display: block;
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tour_info_description .tour_info_accommodation {
+    order: 1;
+}
+
+.tour_info_description .tour_info_other_services {
+    order: 3;
+}
+
+.tour_info_description .tour_info_transport {
+    order: 2;
+    padding-right: 5px;
+    padding-left: 10px;
+}
+
+.tour_info_accommodation .hot_description_wrapper div:nth-child(2), .tour_info_accommodation .hot_description_wrapper div:nth-child(4) {
+    -webkit-line-clamp: 1; 
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    overflow: hidden;
+}
+
+/*MOBILE*/
+@media (max-width: 1250px) {
+    .block_promo_prices {
+        justify-content: space-around;
+    }
+
+    .promo_price_item {
+        width: 48%;
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .promo_price_item {
+        margin: 15px 2%;
+        width: 95%;
+        -webkit-box-shadow: 0 2px 5px 0 #00000029,0 2px 10px 0 #0000001f;
+        box-shadow: 0 2px 5px 0 #00000029,0 2px 10px 0 #0000001f;
+    }
+
+    .description-prop-hotel2 {
+        font-size: 16px;
+    }
+
+    .description-prop-hotel {
+        font-size: 14px;
+    }
+
+    .description-wrapper .description-prop-price {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .promo_price_item {
+        margin: 15px 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal {
+        width: 96%;
+        position: fixed;
+        top: 5%;
+        left: 42%;
+        z-index: 1050;
+        margin-left: -40%;
+        background-color: #ffffff;
+        border: 1px solid #999;
+        border: 1px solid #0000004d;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        -webkit-box-shadow: 0 3px 7px #0000004d;
+        -moz-box-shadow: 0 3px 7px #0000004d;
+        box-shadow: 0 3px 7px #0000004d;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding-box;
+        background-clip: padding-box;
+        outline: none;
+        overflow-y: auto;
+        height: 80%;
+    }
+    .package_wp .description-wrapper {
+        /* padding-top: 10px; */
+        top: 102px;
+    }
+    .package_wp .tour_info_description > div {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    .package_wp .tour_info_accommodation .hot_description_title {
+        font-size: 13px;
+    }
+    .package_wp .tour_info_transport .tour_info_title {
+        font-size: 13px;
+    }
+    .package_promo .description-wrapper {
+        top: 245px;
+    }
+    .package_promo .description-wrapper .description-prop-nights {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .package_promo .description-wrapper .description-prop-food {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .package_promo .description-wrapper .description-prop-room {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .package_promo .description-wrapper .description-prop-placement {
+        font-size: 12px;
+    }
+    .package_promo .description-wrapper .description-prop-price {
+        font-size: 18px;
+    }
+    .promo_price_item:hover .description-prop-hotel2_full {
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .promo_price_item.package_wp:hover .description-wrapper {
+        top: 72px;
+    }
+    .description-prop-hotel2_full {
+        line-height: 22px;
+        height: 69px;
+        width: 100%;
+    }
+    .description-prop-hotel2 {
+        line-height: 21px;
+        height: 35px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 481px) {
+    .modal {
+        width: 80%;
+        position: fixed;
+        top: 10%;
+        left: 50%;
+        z-index: 1050;
+        margin-left: -40%;
+        background-color: #ffffff;
+        border: 1px solid #999;
+        border: 1px solid #0000004d;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        -webkit-box-shadow: 0 3px 7px #0000004d;
+        -moz-box-shadow: 0 3px 7px #0000004d;
+        box-shadow: 0 3px 7px #0000004d;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding-box;
+        background-clip: padding-box;
+        outline: none;
+        overflow-y: auto;
+        height: 80%;
+    }
+}
