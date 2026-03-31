@@ -92,28 +92,6 @@
             }
             window.addEventListener("message", frameEvent, false);
 
-            function debugAllPostMessages(event) {
-                var d = event.data;
-                var preview;
-                if (typeof d === "string") {
-                    preview = d;
-                } else if (d && typeof d === "object") {
-                    try {
-                        preview = JSON.stringify(d);
-                    } catch (e) {
-                        preview = String(d);
-                    }
-                } else {
-                    preview = String(d);
-                }
-                console.log("[postMessage DEBUG] origin:", event.origin, "| typeof:", typeof d, "| data:", preview);
-                var logEl = document.getElementById("test_postmessage_log");
-                if (logEl) {
-                    logEl.textContent += "[" + new Date().toISOString() + "] " + event.origin + " | " + typeof d + " | " + preview + "\n";
-                }
-            }
-            window.addEventListener("message", debugAllPostMessages, false);
-
             jQuery(document).ready(function () {
                 var promo = new PromoPrice();
                 promo.domain = 'proxy.travel';
@@ -808,19 +786,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- <section class="section-module dar-postmessage-test" id="postmessage-test">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <h5 class="mb-3">Test postMessage (iframe → pagina principală)</h5>
-                        <p class="small text-muted mb-2">Mod DEBUG: se înregistrează <strong>toate</strong> <code>postMessage</code> (widget tur, iframe test, altele). La fiecare 15 s iframe-ul de test trimite <code>test-ping:&lt;ISO&gt;</code>. Jurnal + consolă (top):</p>
-                        <pre id="test_postmessage_log" class="p-3 rounded mb-3" style="background:#f6f8fa;font-size:13px;white-space:pre-wrap;word-break:break-all;max-height:200px;overflow:auto;"></pre>
-                        <iframe id="test_postmessage_frame" class="w-100" src="test-postmessage-frame.html" title="Test postMessage" style="height:220px;border:2px solid #1c89b8;border-radius:8px;"></iframe>
-                    </div>
-                </div>
-            </div>
-        </section> -->
+        </section>        
     </main>
     <div class="modal fade" id="popup" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
