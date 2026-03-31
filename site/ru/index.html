@@ -55,6 +55,52 @@
 </script>    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/custom.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.startur.md/js/underscore-min.js"></script>
+    <script src="https://cdn.startur.md/js/jquery.modal.min.js"></script>
+    <script src="https://cdn.startur.md/js/startur.js?v=4"></script>
+    <script type="text/javascript">
+            function frameEvent(event) {
+
+                if (event.data.search('autoscroll') >= 0) {
+                    try {
+                        jQuery('body').scrollTo('#tours_search_frame', 1000);
+                    } catch (err) {
+                        console.log(err)
+                    }
+                }
+
+
+                if (event.data.search('set_frame_height') >= 0 && jQuery('html body').width() >= 991) {
+                    var height = parseInt(event.data.split(':')[1]);
+
+                    try {
+                        var frame = document.getElementById('tours_search_frame')
+
+                        console.log("height - ", height)
+
+                        if (height === 0) {
+                            jQuery(frame).css("height", '');
+                        } else {
+                            frame.style.height = height + 'px'
+                        }
+                    } catch (err) {
+                        console.log(err)
+                    }
+                }
+
+            }
+            window.addEventListener("message", frameEvent, false);
+
+            jQuery(document).ready(function () {
+                var promo = new PromoPrice();
+                promo.domain = 'proxy.travel';
+                promo.token = 'GCuTfVhhNfKkzndo8IiBTApKHz5yJO';
+                promo.price_server = 'proxy.travel';
+                promo.protocol = "https";
+                promo.run();
+            });
+    </script>
 </head>
 <body>
 <script>
@@ -149,6 +195,14 @@
                 </div>
             </div>
         </section>
+        <section class="section-module" id="section-module">
+            <div class="dar-scroll-anchor">
+                <a class="dar-nav-anchor" href="#destinations">&nbsp;</a>
+            </div>
+            <div class="container-fluid">
+                <iframe allowtransparency="true" frameborder="0" id="tours_search_frame" scrolling="yes" src="https://proxy.travel/book/package_search_remote/index/6GozdO8tEiJ0VeC91mgQg8ikRGnaGf/ru" style="display: block" width="100%"></iframe>
+            </div>
+        </section>
         <section class="dar-destinations" id="destinations">
             <div class="dar-scroll-anchor">
                 <a class="dar-nav-anchor" href="#hot-offers">Горячие предложения</a>
@@ -158,6 +212,7 @@
                     <div class="col-12">
                         <h2>Самые популярные направления</h2>
                     </div>
+                    <div class="block_promo_prices" category_id="34" limit="9"></div>
                     <div class="col-sm-6 col-lg-4 mb-3 mb-sm-4 mb-md-5">
                         <figure class="card invisible" itemprop="makesOffer" itemscope itemtype="https://schema.org/Offer">
                             <picture>
@@ -709,7 +764,7 @@
                             <p>Чтобы получить подходящее предложение, пожалуйста, оставьте <strong>НОМЕР ДЛЯ СВЯЗИ</strong> и укажите следующие данные:</p>
                         </div>
                         <div class="col-12">
-                            <div class="dar-lead-form__placeholder" aria-hidden="true"></div>
+                            <iframe class="dar-lead-form" allowtransparency="true" frameborder="0" id="lead_form_frame" scrolling="yes" src="https://proxy.travel/book/leads/leadform2/6GozdO8tEiJ0VeC91mgQg8ikRGnaGf/ru" style="display: block" width="100%"></iframe>
                         </div>
                     </div>
                 </div>
@@ -786,7 +841,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <script src="../assets/js/app.js"></script>
     </body>
 </html>
