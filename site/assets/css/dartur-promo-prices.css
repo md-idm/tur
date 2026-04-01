@@ -1,5 +1,6 @@
 .promo_price_item {    
     transition: 0.3s ease-out;
+    border-radius: 1.25rem;
 }
 
 .hot_offer_modal {    
@@ -722,45 +723,6 @@ a:hover, a:focus {
         overflow-y: auto;
         height: 80%;
     }
-}
-
-/*
- * .dar-destinations: same column widths as sibling .col-sm-6.col-lg-4 cards (flex, no CSS Grid).
- * Uses --bs-gutter-x from custom.css .row (Bootstrap gutter).
- */
-.dar-destinations .block_promo_prices {
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 100%;
-  max-width: 100%;
-  flex: 0 0 100%;
-}
-
-.dar-destinations .block_promo_prices .promo_price_item {
-  box-sizing: border-box;
-  margin: 0 0 1.5rem 0;
-  padding-left: calc(var(--bs-gutter-x, 1rem) * 0.5);
-  padding-right: calc(var(--bs-gutter-x, 1rem) * 0.5);
-  width: auto;
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-/* sm — aligns with .col-sm-6 */
-@media (min-width: 576px) {
-  .dar-destinations .block_promo_prices .promo_price_item {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-/* lg — aligns with .col-lg-4 */
-@media (min-width: 992px) {
-  .dar-destinations .block_promo_prices .promo_price_item {
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-    margin-bottom: 3rem;
-  }
 }
 
 /* Palette / typography aligned with custom.css (.dar-destinations .card): --dar-blue, --dar-gold, --dar-teal, --bs-body-font-family (Roboto). */
