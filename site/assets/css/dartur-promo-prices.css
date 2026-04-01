@@ -1,16 +1,13 @@
-.promo_price_item {
-    margin: 15px 12px;
-    width: 31%;
-    -webkit-box-shadow: 0 2px 5px 0 #00000029,0 2px 10px 0 #0000001f !important;
-    box-shadow: 0 2px 5px 0 #00000029,0 2px 10px 0 #0000001f !important;
+.promo_price_item {    
     transition: 0.3s ease-out;
-    border-radius: 30px;
 }
 
-.promo_price_item:hover {
-    /* margin-top: -15px; */
-    -webkit-box-shadow: 0 10px 30px #1818184d;
-    box-shadow: 0 10px 30px #1818184d;
+.hot_offer_modal {    
+    -webkit-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 1.25rem;
+    border: unset;
+    overflow: hidden;
 }
 
 .block_promo_prices {
@@ -60,15 +57,16 @@
     display: block;
     font-size: 15px;
     line-height: 15px;
-    font-weight: 700;
+    font-weight: 500;
     height: 40px;
     overflow: hidden;
-    background: #FFCC00;
+    background: #fff;
     padding: 5px 5px;
-    color: #176EA7;
-    border-right: 1px solid #DAA300;
-    border-left: 1px solid #DAA300;
-    border-bottom: 1px solid #DAA300;
+    color: var(--dar-blue, #1c89b8);
+    border-right: 1px solid rgba(28, 137, 184, 0.22);
+    border-left: 1px solid rgba(28, 137, 184, 0.22);
+    border-bottom: 1px solid rgba(28, 137, 184, 0.22);
+    font-family: var(--bs-body-font-family, "Roboto", sans-serif);
 }
 
 .promo_hotel_icon:hover {
@@ -87,7 +85,7 @@
     overflow: hidden;
     background-position: 50%;
     background-size: cover;
-    border-radius: 30px;
+    border-radius: 1.25rem;
 }
 
 .modal a.close-modal {
@@ -108,7 +106,7 @@
 }
 
 .promo_item_sum_intern {
-    background: #8dc645;
+    background: var(--dar-teal, #477373);
     width: 126px;
     position: absolute;
     margin-left: -22px;
@@ -125,20 +123,20 @@
 }
 
 .promo_item_spo_intern {
-    background: #00c4e0;
+    background: var(--dar-blue, #1c89b8);
     color: #fff;
     text-align: center;
     font-size: 15px;
     width: 150px;
     position: absolute;
-    font-weight: 800;
+    font-weight: 700;
     margin-left: 0;
     height: 28px;
     line-height: 28px;
     margin-top: 60px;
     z-index: 2;
     background-size: contain;
-    text-shadow: 0 1px 3px #18181833;
+    text-shadow: none;
 }
 
 .promo_item_spo {
@@ -211,6 +209,9 @@ a:hover, a:focus {
 
 .package_wp .description-wrapper {
     height: 100%;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     overflow: hidden;
     position: relative;
     top: 279px;
@@ -220,7 +221,7 @@ a:hover, a:focus {
     -o-transition: top .5s ease-out .1s;
     transition: top .5s ease-out .1s;
     background: linear-gradient(to bottom,  #00000000 0%,#000000a6 43%,#000000 100%);
-    font-family: 'Montserrat';
+    font-family: var(--bs-body-font-family, "Roboto", sans-serif);
     color: #fff;
 }
 
@@ -235,7 +236,7 @@ a:hover, a:focus {
     -o-transition: top .5s ease-out .1s;
     transition: top .5s ease-out .1s;
     background: linear-gradient(to bottom,  #00000000 0%,#00000080 43%,#000000 100%);
-    font-family: 'Montserrat';
+    font-family: var(--bs-body-font-family, "Roboto", sans-serif);
 }
 
 .promo_price_item.package_wp:hover .description-wrapper {
@@ -249,18 +250,18 @@ a:hover, a:focus {
 
 .description-wrapper .description-prop-date {
     float: left;
-    border-top: 2px solid #fff;
+    border-top: 2px solid rgba(255, 255, 255, 0.45);
     line-height: 32px;
     margin-left: 15px;
     color: #fff;
     font-size: 15px;
     font-weight: 400;
-    font-family: 'Montserrat';
+    font-family: var(--bs-body-font-family, "Roboto", sans-serif);
 }
 
 .description-wrapper .description-prop-date i {
     margin-right: 3px;
-    color: #FFD23E;
+    color: var(--dar-gold, #f3ca56);
 }
 
 .description-wrapper .description-prop-nights i {
@@ -281,15 +282,16 @@ a:hover, a:focus {
 
 .description-prop-price {
     position: absolute;
-    background: #FFD23E;
+    background: var(--dar-blue, #1c89b8);
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 500;
     padding: 6px 25px;
     top: 20px;
-    left: 0px;
+    left: 1.25rem;
     color: #fff;
-    font-family: Montserrat;
-    text-shadow: 0 1px 3px #18181833;
+    font-family: var(--bs-body-font-family, "Roboto", sans-serif);
+    text-shadow: none;
+    border-radius: 50rem;
     z-index: 1;
 }
 
@@ -385,22 +387,30 @@ a:hover, a:focus {
 }
 
 .block_promo_prices a {
-    color: #fff!important;
+    color: var(--dar-gold, #f3ca56) !important;
     text-decoration: none;
-    text-shadow: 0 1px 3px #18181833;
+    text-shadow: none;
+}
+
+/* Card root link fills column width (inner blocks were narrower than .promo_price_item) */
+.block_promo_prices .promo_price_item > a {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .description-prop-hotel {
     font-size: 15px;
     font-weight: 400;
     height: 22px;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 0.88);
     padding-left: 15px;
     /* margin-top: 8px; */
     text-align: left;
     line-height: 14px;
     width: 74%;
-    font-family: 'Montserrat';
+    font-family: var(--bs-body-font-family, "Roboto", sans-serif);
 }
 
 /* .promo_price_item:hover .description-prop-hotel { */
@@ -409,14 +419,15 @@ a:hover, a:focus {
 
 .description-prop-hotel2 {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 150%;
     height: 35px;
     padding: 6px 0 0 15px;
     text-align: left;
     width: 100%;
-    font-family: Montserrat;
+    font-family: var(--bs-body-font-family, "Roboto", sans-serif);
     background: #ffffff00;
+    color: #fff;
     /* text-align: center; */
 }
 
@@ -434,15 +445,16 @@ a:hover, a:focus {
 
 .description-prop-hotel2_full {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 22px;
     height: 35px;
     padding: 6px 0 0 15px;
     text-align: left;
     width: 100%;
-    font-family: Montserrat;
+    font-family: var(--bs-body-font-family, "Roboto", sans-serif);
     display: none;
     background: #ffffff00;
+    color: #fff;
     /* text-align: center; */
 }
 
@@ -475,7 +487,7 @@ a:hover, a:focus {
 .tour_info_title_h {
     font-size: 18px;
     margin-bottom: 0!important;
-    font-family: 'Montserrat';
+    font-family: var(--bs-body-font-family, "Roboto", sans-serif);
     font-weight: 500;
     padding-bottom: 4px;
     color: #eee
@@ -484,22 +496,29 @@ a:hover, a:focus {
 .description-prop-description {
     margin-top: 40px;
     padding: 0 15px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .tour_info_description i.fa-check {
-    color: #FFD23E;
+    color: var(--dar-gold, #f3ca56);
     margin-right: 3px;
 }
 
 .tour_info_description {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .tour_info_description > div {
     padding-right: 2px;
     padding-bottom: 4px;
-    font-family: 'Montserrat';
+    font-family: var(--bs-body-font-family, "Roboto", sans-serif);
     width: 50%;
     box-sizing: border-box;
     font-size: 14px;
@@ -509,7 +528,7 @@ a:hover, a:focus {
 }
 
 .tour_info_accommodation .hot_description_title {
-    font-family: 'Montserrat';
+    font-family: var(--bs-body-font-family, "Roboto", sans-serif);
     margin-bottom: 3px;
     font-size: 15px;
     margin-top: 5px;
@@ -525,7 +544,7 @@ a:hover, a:focus {
     margin-bottom: 3px;
     font-size: 15px;
     margin-top: 5px;
-    font-family: 'Montserrat';
+    font-family: var(--bs-body-font-family, "Roboto", sans-serif);
     font-weight: 600;
 }
 
@@ -535,7 +554,7 @@ a:hover, a:focus {
     font-size: 15px;
     display: block;
     margin-top: 5px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--bs-body-font-family, "Roboto", sans-serif);
 }
 
 .tour_info_description .tour_info_accommodation {
@@ -575,8 +594,8 @@ a:hover, a:focus {
     .promo_price_item {
         margin: 15px 2%;
         width: 95%;
-        -webkit-box-shadow: 0 2px 5px 0 #00000029,0 2px 10px 0 #0000001f;
-        box-shadow: 0 2px 5px 0 #00000029,0 2px 10px 0 #0000001f;
+        -webkit-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
     }
 
     .description-prop-hotel2 {
@@ -704,3 +723,44 @@ a:hover, a:focus {
         height: 80%;
     }
 }
+
+/*
+ * .dar-destinations: same column widths as sibling .col-sm-6.col-lg-4 cards (flex, no CSS Grid).
+ * Uses --bs-gutter-x from custom.css .row (Bootstrap gutter).
+ */
+.dar-destinations .block_promo_prices {
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+
+.dar-destinations .block_promo_prices .promo_price_item {
+  box-sizing: border-box;
+  margin: 0 0 1.5rem 0;
+  padding-left: calc(var(--bs-gutter-x, 1rem) * 0.5);
+  padding-right: calc(var(--bs-gutter-x, 1rem) * 0.5);
+  width: auto;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/* sm — aligns with .col-sm-6 */
+@media (min-width: 576px) {
+  .dar-destinations .block_promo_prices .promo_price_item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* lg — aligns with .col-lg-4 */
+@media (min-width: 992px) {
+  .dar-destinations .block_promo_prices .promo_price_item {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    margin-bottom: 3rem;
+  }
+}
+
+/* Palette / typography aligned with custom.css (.dar-destinations .card): --dar-blue, --dar-gold, --dar-teal, --bs-body-font-family (Roboto). */
