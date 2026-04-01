@@ -763,7 +763,6 @@ a:hover, a:focus {
   .dar-destinations .block_promo_prices .promo_price_item {
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
-    margin-bottom: 3rem;
   }
 }
 

@@ -195,7 +195,7 @@ function get_hot_prices(domain, token, price_server, category_id, limit, obj, pr
                     price_html += "<div class='promo_item_hotel_photo' style='background-image: url(" + main_photo + ")'> " + description + " </div>";
                 }
 
-                price_html = "<div class='promo_price_item package_wp col-sm-6 col-lg-4 mb-3 mb-sm-4 mb-md-5'><a style='cursor:pointer' class='hot_offer_modal' data-modal='#hot_item_desc" + price.id + "' data-id='" + price.id + "' target='_blank'>" + price_html + "</a></div>"
+                price_html = "<div class='promo_price_item package_wp col-sm-6 col-lg-4 mb-3 mb-sm-3 mb-md-3'><a style='cursor:pointer' class='hot_offer_modal' data-modal='#hot_item_desc" + price.id + "' data-id='" + price.id + "' target='_blank'>" + price_html + "</a></div>"
 
                 jQuery(obj).append(price_html);
 
