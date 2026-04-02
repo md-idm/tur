@@ -152,6 +152,7 @@ section .container-fluid {
 }
 .section-module .container-fluid {
   margin: -78px auto 0;
+  max-width: 1408px;
 }
 section.section-module #tours_search_frame {
   display: block;
