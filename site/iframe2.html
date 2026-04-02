@@ -548,7 +548,7 @@
   </form>
   <script src="/pt-assets/travel_book/leadforms-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js" cache="false"></script>
   
-  <!-- JS проверки формы -->
+  <!-- Lead form: client-side validation -->
   <script>
     (function() {
   
@@ -583,7 +583,7 @@
         }
       });
   
-      // ─── Хелперы валидации ────────────────────────────────────────────────────
+      // ─── Validation helpers ─────────────────────────────────────────────────
   
       function lfSetState($field, state, msg) {
         var $chosen = $field.next('.chosen-container');
@@ -628,7 +628,7 @@
         return isInternational ? digits >= 10 : digits >= 7;
       }
   
-      // ─── Real-time валидация полей ────────────────────────────────────────────
+      // ─── Real-time field validation ───────────────────────────────────────────
   
       $('#leadform_remote_form').on('input', '#lead_lead_name', function() {
         var $f = $(this);
@@ -758,7 +758,7 @@
         lfSetState($f, newState, newState === 'valid' ? 'Excelent!' : null);
       });
   
-      // ─── Submit: валидация + AJAX ─────────────────────────────────────────────
+      // ─── Submit: validation + AJAX ────────────────────────────────────────────
   
       var TOTAL_SECONDS = 10;
       var circumference = 119.4;
