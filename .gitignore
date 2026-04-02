@@ -1,0 +1,6 @@
+node_modules/
+
+# Root npm metadata / scripts — kept on the tooling branch, not main
+/package.json
+/package-lock.json
+/scripts/
