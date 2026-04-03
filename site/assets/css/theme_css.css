@@ -52,13 +52,47 @@ i[class^="icon-"] {
 }
 
 /* Extra vertical gap between wrapped flex rows */
-.content.top_form .form_row {
-  row-gap: 1.25rem;
+@media (min-width: 768px) {
+  .content.top_form .form_row {
+    row-gap: 1.25rem;
+  }
 }
 
 /* Search button column: push right in flex row */
 .content.top_form .form_row .button_search_top {
   margin-left: auto !important;
+}
+
+.content.top_form .title_hide {
+  margin-left: 12px;
+}
+
+/* Тема (filter_b2c) задаёт .col_night { margin-right: 198px; } — убираем */
+.content.top_form .col_night {
+  margin-right: 0 !important;
+  max-width: 148px !important;
+}
+
+@media (min-width: 601px) {
+  .content.top_form .col_night {
+    max-width: 198px !important;
+  }
+}
+
+.content.top_form .adults_col fieldset,
+.content.top_form .cilds_col fieldset {
+  width: 70px !important;
+}
+
+@media (min-width: 601px) {
+  .content.top_form .adults_col fieldset,
+  .content.top_form .cilds_col fieldset {
+    width: 190px !important;
+  }
+}
+
+.content.top_form .cilds_col_age {
+  margin-top: 0 !important;
 }
 
 /* theme / filter_b2c — card tint. .content.top_form is separate: uniform cream tint + isolate */
@@ -70,8 +104,12 @@ i[class^="icon-"] {
 
 .content.top_form {
   background-color: var(--sf-top-form-bg);
-  border-radius: var(--sf-block-radius) !important;
   isolation: isolate;
+}
+
+/* html body — выше специфичность, чем у mob_filter_b2c / md-правил (скругление обнуляется ниже 768px) */
+html body .content.top_form {
+  border-radius: var(--sf-block-radius) !important;
 }
 
 .excursion_main_desc {
@@ -89,10 +127,11 @@ i[class^="icon-"] {
 }
 
 /* Clip backgrounds/images to rounded corners (avoid on .left_filter — dropdowns) */
-.content.top_form,
+/* .content.top_form, */
 .row.result_item_block {
   overflow: hidden;
 }
+
 
 /* Tour row image column: thumbnails are .hotel_icon + background-image (not <img>) */
 .result_item_block  {
@@ -141,6 +180,12 @@ i[class^="icon-"] {
 .price_block .item_price > div:first-child,
 .price_block .item_price span {
   color: var(--dar-gold-deep) !important;
+}
+
+/* Theme filter_b2c: .top_form i { color: #009fcd } — match gold icons (e.g. chd ages caret) */
+.content.top_form i,
+.content.top_form .fa {
+  color: var(--dar-gold) !important;
 }
 
 /* Gold CTA buttons (matches index .btn look; no extra font-size/padding here) */
@@ -342,6 +387,73 @@ fieldset[class*="_fieldset"] .nights_from_to {
   box-sizing: border-box;
   overflow: hidden;
   background-color: white;
+}
+
+.content.top_form .btn_col_chd_ages {
+  border: none !important;
+  border-radius: var(--sf-block-radius) !important;
+  box-shadow: var(--sf-fieldset-ring) !important;
+}
+
+/* State: gold ring on .top_form__state_select, not on state_fieldset */
+fieldset[class*="_fieldset"]:has(.top_form__state_select) {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+fieldset[class*="_fieldset"] .top_form__state_select {
+  border: none !important;
+  border-radius: var(--sf-block-radius) !important;
+  box-shadow: var(--sf-fieldset-ring) !important;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* Date in: gold ring on .top_form__date_in, not on rest_fieldset */
+fieldset[class*="_fieldset"]:has(.top_form__date_in) {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+fieldset[class*="_fieldset"] .top_form__date_in {
+  border: none !important;
+  border-radius: var(--sf-block-radius) !important;
+  box-shadow: var(--sf-fieldset-ring) !important;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* Date out: gold ring on .top_form__date_out, not on rest_fieldset */
+fieldset[class*="_fieldset"]:has(.top_form__date_out) {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+fieldset[class*="_fieldset"] .top_form__date_out {
+  width: auto;
+  min-width: 150px;
+  border: none !important;
+  border-radius: var(--sf-block-radius) !important;
+  box-shadow: var(--sf-fieldset-ring) !important;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+fieldset[class*="_fieldset"] .top_form__date_out input {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 765px) {
+  fieldset[class*="_fieldset"]:has(.top_form__date_out) {
+    padding-left: 8px;
+  }
 }
 
 .content.top_form .stepper-wrap {
