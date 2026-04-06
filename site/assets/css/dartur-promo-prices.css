@@ -92,7 +92,8 @@
     border-radius: 1.25rem;
 }
 
-.modal a.close-modal {
+/* Promo hot-offer modals (jquery-modal); do not target Bootstrap .modal.fade */
+.promo_item_desc.modal a.close-modal {
     top: 0px;
     right: 0px;
 }
@@ -623,7 +624,7 @@ a:hover, a:focus {
 }
 
 @media (max-width: 480px) {
-    .modal {
+    .promo_item_desc.modal {
         width: 96%;
         position: fixed;
         top: 5%;
@@ -703,7 +704,7 @@ a:hover, a:focus {
 }
 
 @media (min-width: 481px) {
-    .modal {
+    .promo_item_desc.modal {
         width: 80%;
         position: fixed;
         top: 10%;

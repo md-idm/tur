@@ -52,8 +52,7 @@
             "https://www.tiktok.com/@dartur.prim"
         ]
     }
-</script>    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
-    <link rel="stylesheet" href="assets/css/base.css">
+</script>    <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/dartur-promo-prices.css" media="screen">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
@@ -799,39 +798,7 @@
                 <div class="modal-body">
                     <div class="dar-modal__title">Obține consultația managerului</div>
                     <div class="dar-modal__text">Lasă-ne datele tale de contact, iar noi te vom suna în cel mai scurt timp!</div>
-                    <form action="api/send" method="POST">
-                        <div class="form-floating mb-3">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Nume*" required>
-                            <label for="name">Nume*</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="number" name="phone" class="form-control" id="phone" placeholder="Telefon*" required>
-                        </div>
-                        <div class="form-check mb-3">
-                            <input class="form-check-input" type="radio" name="policy" id="policy" checked>
-                            <label class="form-check-label" for="policy">Sunt de acord ca datele mele personale să fie stocate în sistemul de date, pentru o perioadă nedeterminată.</label>
-                        </div>
-                        <input type="hidden" name="utm_source" value="">
-                        <input type="hidden" name="utm_medium" value="">
-                        <input type="hidden" name="utm_campaign" value="">
-                        <button type="submit" name="submit" value="submit" class="btn w-100" data-txtexecute="Expediem, așteptați...">Află detalii</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="send-response" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p class="p-3 mb-0 bg-success lh-sm text-white text-center">Solicitarea a fost expediată cu success!</p>
-                    <p class="p-3 mb-0 bg-danger lh-sm text-white text-center">Eroare internă, nu am reușit să vă înregistrăm, vă rugăm să încercați din nou</p>
-                    <div class="d-flex justify-content-center">
-                        <a class="btn mt-4" style="background:#1C89B8;border:unset;" href="https://online.dartur.md/" target="_blank" rel="noopener noreferrer">Vezi oferte online</a>
-                    </div>
+                    <iframe class="dar-modal__lead-iframe" allowtransparency="true" frameborder="0" id="leadform0_frame" scrolling="yes" src="https://proxy.travel/book/leads/leadform0/6GozdO8tEiJ0VeC91mgQg8ikRGnaGf/ro" title="Consultație manager" width="100%" height="400"></iframe>
                 </div>
             </div>
         </div>
@@ -839,7 +806,6 @@
     <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>

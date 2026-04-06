@@ -1035,52 +1035,11 @@ header .dar-header__contacts-telegram a:hover {
   margin: 8px 0 24px;
   text-align: center;
 }
-.modal-body .form-floating label {
+#popup .dar-modal__lead-iframe {
+  border: 0;
+  display: block;
+  height: 400px;
   width: 100%;
-}
-.modal-body .form-floating .iti {
-  width: 100%;
-}
-.modal-body .form-floating .iti__selected-flag {
-  border-bottom-left-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
-}
-.modal-body .form-floating .iti__country-name {
-  color: #000;
-}
-.modal-body .form-floating .iti__country-list {
-  border: unset;
-  border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 20px 30px;
-  margin-top: 10px;
-  z-index: 3;
-}
-.modal-body .form-floating .iti .form-control {
-  height: calc(3.5rem + 2px);
-  padding: 1rem 0.75rem 1rem calc(96px + 0.5rem) !important;
-}
-.modal-body .form-control,
-.modal-body .form-select {
-  background-color: rgba(254, 255, 183, 0.28);
-  border-color: rgba(71, 115, 115, 0.22);
-  border-radius: 0.5rem;
-  font-size: 18px;
-}
-.modal-body .form-control:focus,
-.modal-body .form-select:focus {
-  border-color: var(--dar-blue);
-  box-shadow: unset;
-}
-.modal-body .form-check-input:checked {
-  background-color: var(--dar-blue);
-  border-color: var(--dar-blue);
-}
-.modal-body .form-check-input:focus {
-  box-shadow: unset;
-}
-.modal-body .form-check-label {
-  font-size: 14px;
-  line-height: 1;
 }
 .modal-content {
   border-radius: 1rem;
@@ -1093,9 +1052,6 @@ header .dar-header__contacts-telegram a:hover {
 }
 .modal-body {
   padding: 0 2rem 2rem;
-}
-.grecaptcha-badge {
-  display: none;
 }
 @media (max-width: 1399.98px) {
   header .navbar-nav .nav-item .nav-link {
