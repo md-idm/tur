@@ -46,6 +46,10 @@ i[class^="icon-"] {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.content.top_form .form_row {
+  justify-content: flex-start;
+}
+
 /* Extra vertical gap between wrapped flex rows */
 @media (min-width: 768px) {
   .content.top_form .form_row {
@@ -64,13 +68,14 @@ i[class^="icon-"] {
 
 /* Тема (filter_b2c) задаёт .col_night { margin-right: 198px; } — убираем */
 .content.top_form .col_night {
+  margin-left: 8px !important;
   margin-right: 0 !important;
   max-width: 148px !important;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 996px) {
   .content.top_form .col_night {
-    max-width: 198px !important;
+    max-width: none !important;
   }
 }
 
@@ -86,6 +91,13 @@ i[class^="icon-"] {
   }
 }
 
+@media (min-width: 996px) {
+  .content.top_form .adults_col fieldset,
+  .content.top_form .cilds_col fieldset {
+    width: auto !important;
+  }
+}
+
 .content.top_form .cilds_col_age {
   margin-top: 0 !important;
 }
@@ -98,6 +110,7 @@ i[class^="icon-"] {
 }
 
 .content.top_form {
+  max-width: 1408px;
   background-color: var(--sf-top-form-bg);
   border-radius: var(--sf-block-radius) !important;
   isolation: isolate;
@@ -176,6 +189,12 @@ i[class^="icon-"] {
 .content.top_form i,
 .content.top_form .fa {
   color: var(--dar-gold) !important;
+}
+
+@media (min-width: 601px) {
+  .top_form_button_search {
+    margin-top: 0 !important;
+  }
 }
 
 /* Gold CTA buttons (matches index .btn look; no extra font-size/padding here) */
@@ -417,6 +436,11 @@ fieldset[class*="_fieldset"] .top_form__date_in {
   background-color: #fff;
 }
 
+/* Hide checkout date column (iframe1 — .date_out on wrapper) */
+.date_out {
+  display: none !important;
+}
+
 /* Date out: gold ring on .top_form__date_out, not on rest_fieldset */
 fieldset[class*="_fieldset"]:has(.top_form__date_out) {
   border-radius: 0 !important;
@@ -455,6 +479,12 @@ fieldset[class*="_fieldset"] .top_form__date_out input {
   box-sizing: border-box;
   overflow: hidden;
   background-color: white;
+}
+
+@media (min-width: 601px) {
+  .content.top_form .stepper-wrap {
+    margin: 0 !important;
+  }
 }
 
 /* Stepper fieldsets lack *_fieldset; strip inner .form-control border here */
