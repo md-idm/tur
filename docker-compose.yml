@@ -1,8 +1,8 @@
 # From repo root: docker compose up -d
 # Site: http://localhost/  (or http://127.0.0.1:8080/ if you map 8080:80 below)
 #
-# ./site is bind-mounted: edit files on the host → same files in the container immediately.
-# Reload the browser (Ctrl+F5 if cache is sticky). No image rebuild needed.
+# Nginx serves site/dist. After editing HTML under site/, run `node site/build.mjs`, then refresh (Ctrl+F5).
+# ./site/dist is bind-mounted from the host.
 #
 # After editing nginx/default.conf:  docker compose exec web nginx -s reload
 
@@ -15,6 +15,6 @@ services:
       # - "8080:80"
     volumes:
       # Host project folder → nginx document root (live sync)
-      - ./site:/usr/share/nginx/html:rw
+      - ./site/dist:/usr/share/nginx/html:rw
       # Nginx site config (edit on host; then: docker compose exec web nginx -s reload)
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:rw
